@@ -1,7 +1,7 @@
 # Web Development with ASP.NET 1.1
 
 ➡️ **Online course:**
-[Web Development with ASP.NET 1.1](https://stahe.github.io/aspnet1.1-avril-2004-en-US/)
+[Web Development with ASP.NET 1.1](https://stahe.github.io/en-aspnet1.1-avril-2004/)
 
 ## Introduction
 
