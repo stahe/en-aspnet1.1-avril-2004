@@ -141,9 +141,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -151,9 +151,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -1111,15 +1111,15 @@
 
 
 
-<p><a id="toc68590499"></a>
-<a id="toc68683093"></a></p>
+<p><a id="toc68683093"></a>
+<a id="toc68590499"></a></p>
 <h1 id="6-examples">6. Examples</h1>
 <p>In this chapter, we will illustrate what we have seen previously through a series of examples.</p>
-<p><a id="toc68590500"></a>
-<a id="toc68683094"></a></p>
+<p><a id="toc68683094"></a>
+<a id="toc68590500"></a></p>
 <h2 id="61-example-1">6.1. Example 1</h2>
-<p><a id="toc68590501"></a>
-<a id="toc68683095"></a></p>
+<p><a id="toc68683095"></a>
+<a id="toc68590501"></a></p>
 <h3 id="611-the-problem">6.1.1. The Problem</h3>
 <p>This application must allow a user to calculate their taxes. We are considering the simplified case of a taxpayer who has only their salary to report (2004 figures for 2003 income):</p>
 <ul>
@@ -1144,8 +1144,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    0                0.4809    9505.54
 </code></pre></div>
 <p>which gives tax I = 0.4809*R - 9505.54*nbParts.</p>
-<p><a id="toc68590502"></a>
-<a id="toc68683096"></a></p>
+<p><a id="toc68683096"></a>
+<a id="toc68590502"></a></p>
 <h3 id="612-the-applications-mvc-structure">6.1.2. The application&#x27;s MVC structure</h3>
 <p>The application&#x27;s MVC structure will be as follows:</p>
 <p><img src="images/10000000000005AB00000258B0036703.png" style="width:17.999cm;height:7.444cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AB00000258B0036703.png" /></p>
@@ -1160,8 +1160,8 @@
 </ul>
 
 <p>The [main.aspx] controller knows nothing about tax calculations. It is simply responsible for managing the client-server dialogue and executing the actions requested by the client. For the [calculate] action, it will rely on the [tax] business class.</p>
-<p><a id="toc68590503"></a>
-<a id="toc68683097"></a></p>
+<p><a id="toc68683097"></a>
+<a id="toc68590503"></a></p>
 <h3 id="613-the-business-class">6.1.3. The business class</h3>
 <p>The <code>**impot</code>** class will be defined as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -1212,8 +1212,8 @@
 </code></pre></div>
 
 <p>A <strong>tax</strong> object by providing its constructor with a data source of type [<strong>impotsData</strong>]. This class has a public method [<strong>getData</strong>] that retrieves the three data arrays needed to calculate the tax, as described earlier. This method can handle an exception if the data could not be retrieved or if it is found to be incorrect. Once the [tax] object is created, its <strong>calculate</strong> method can be called repeatedly to calculate the taxpayer’s tax based on their marital status (married or single), number of children, and annual salary.</p>
-<p><a id="toc68590504"></a>
-<a id="toc68683098"></a></p>
+<p><a id="toc68683098"></a>
+<a id="toc68590504"></a></p>
 <h3 id="614-the-data-access-class">6.1.4. The data access class</h3>
 <p>The [impotsData] class is the class that provides access to the data. It is an abstract class. A derived class must be created for each new possible data source (arrays, flat files, databases, console, etc.). Its definition is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1340,14 +1340,14 @@
 </ul>
 
 <p>The [getData] method, which allows external classes to retrieve the arrays (limits, coeffr, coeffn), simply verifies the validity of the three arrays using the [checkData] method of the base class. It throws an exception if the data is invalid.</p>
-<p><a id="toc68590505"></a>
-<a id="toc68683099"></a></p>
+<p><a id="toc68683099"></a>
+<a id="toc68590505"></a></p>
 <h3 id="615-testing-business-classes-and-data-access-classes">6.1.5. Testing business classes and data access classes</h3>
 <p>It is important to include only business and data access classes that have been verified as correct in a web application. This way, the web application’s debugging phase can focus on the controller and view layers. A test program might look like the following:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line">&#x27; options</span>
 <span class="odt-code-line"><span style="color:#0000ff">Option Strict On</span><span style="color:#0000ff"></span></span>
-<span class="odt-code-line"><span style="color:#0000ff">Option Explicit On </span></span>
+<span class="odt-code-line">Option Explicit On </span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">&#x27; namespaces</span>
 <span class="odt-code-line"><span style="color:#0000ff">Imports </span>System</span>
@@ -1488,8 +1488,8 @@
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>tax=6,872 euro(s)
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>Tax calculation parameters for married couples with n children, salary or nothing to stop at:
 </code></pre></div>
-<p><a id="toc68590506"></a>
-<a id="toc68683100"></a></p>
+<p><a id="toc68683100"></a>
+<a id="toc68590506"></a></p>
 <h3 id="616-web-application-views">6.1.6. Web application views</h3>
 <p>The application will have two views: [form.aspx] and [errors.aspx]. Let’s illustrate how the application works using screenshots. The [form.aspx] view is displayed when the URL [main.aspx] is requested for the first time:</p>
 <p><img src="images/1000000000000100000000FEAFB8A86F.png" style="width:6.773cm;height:6.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000100000000FEAFB8A86F.png" /></p>
@@ -1503,8 +1503,8 @@
 <p><img src="images/1000000000000100000000912AC3FAD4.png" style="width:6.773cm;height:3.836cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000100000000912AC3FAD4.png" /></p>
 <p>They can use the [Back to Form] link above to return to the [form.aspx] view as it was before the error:</p>
 <p><img src="images/10000000000001010000008BD04534B1.png" style="width:6.8cm;height:3.678cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001010000008BD04534B1.png" /></p>
-<p><a id="toc68590507"></a>
-<a id="toc68683101"></a></p>
+<p><a id="toc68683101"></a>
+<a id="toc68590507"></a></p>
 <h3 id="617-the-formaspx-view">6.1.7. The [form.aspx] view</h3>
 <p>The [form.aspx] page will be as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1628,8 +1628,8 @@
   </li>
 </ul>
 
-<p><a id="toc68590508"></a>
-<a id="toc68683102"></a></p>
+<p><a id="toc68683102"></a>
+<a id="toc68590508"></a></p>
 <h3 id="618-the-erreursaspx-view">6.1.8. The [erreurs.aspx] view</h3>
 <p>The [erreurs.aspx] view displays any errors that may occur during the application&#x27;s runtime. Its presentation code is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1704,8 +1704,8 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">link text</div></td></tr></table>
 
 <p>Now that we know what the application user sees, we can move on to writing the application&#x27;s controller.</p>
-<p><a id="toc68590509"></a>
-<a id="toc68683103"></a></p>
+<p><a id="toc68683103"></a>
+<a id="toc68590509"></a></p>
 <h3 id="619-the-controllers-globalasax-mainaspx">6.1.9. The controllers [global.asax, main.aspx]</h3>
 <p>Let’s review the MVC architecture of our application:</p>
 <p><img src="images/10000000000005BE0000027993D6CC27.png" style="width:17.999cm;height:7.751cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BE0000027993D6CC27.png" /></p>
@@ -3606,9 +3606,9 @@
           https://tahe.developpez.com
         </a>
         <br>
-        This tutorial, written by <strong>Serge Tahé</strong>, is made available to the public under the terms of the
-        <em>Creative Commons Attribution – Non-Commercial –
-        ShareAlike 3.0 Unported Licence</em>.
+        This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
       </div>
 
     </div>

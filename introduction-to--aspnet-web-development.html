@@ -141,9 +141,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -151,9 +151,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -747,11 +747,11 @@
 
 
 <p><a id="toc57014748"></a>
-<a id="toc69180137"></a>
-<a id="toc69179879"></a></p>
+<a id="toc69179879"></a>
+<a id="toc69180137"></a></p>
 <h1 id="3-introduction-to-aspnet-web-development">3. Introduction to  ASP.NET Web Development</h1>
-<p><a id="toc69179880"></a>
-<a id="toc69180138"></a></p>
+<p><a id="toc69180138"></a>
+<a id="toc69179880"></a></p>
 <h2 id="31-introduction">3.1. Introduction</h2>
 <p>The previous chapter introduced the principles of web development, which are independent of the programming language used. Currently, three technologies dominate the web development market:</p>
 <ul>
@@ -804,8 +804,8 @@
 </ul>
 
 <p>The unique aspect of web development lies in writing the controller class and the presentation pages. The business and data access classes are standard .NET classes that can be used in a web application as well as in a Windows application or even a console application. Writing these classes requires a solid understanding of object-oriented programming. In this document, they will be written in VB.NET, so we assume that you are proficient in this language. From this perspective, there is no need to dwell on the data access code more than necessary. In almost all books on ASP.NET, a chapter is devoted to ADO.NET. The diagram above shows that data access is handled by standard .NET classes that are unaware they are being used in a web context. The controller, which acts as the team leader of the web application, does not need to worry about ADO.NET. It simply needs to know which class to request the required data from and how to request it. That’s all. Placing ADO.NET code in the controller violates the MVC concept explained above, and we will not do so.</p>
-<p><a id="toc69179881"></a>
-<a id="toc69180139"></a></p>
+<p><a id="toc69180139"></a>
+<a id="toc69179881"></a></p>
 <h2 id="32-tools">3.2. Tools</h2>
 <p>This document is intended for students, so we will work with free tools available for download on the internet:</p>
 <ul>
@@ -876,12 +876,12 @@
 <p>Now let&#x27;s request the URL [http://localhost/aspnet] using a browser:</p>
 <p><img src="images/10000000000001930000007E3010A7C6.png" style="width:10.663cm;height:3.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001930000007E3010A7C6.png" /></p>
 <p>We see that in reality, the URL [http://localhost/aspnet/default.aspx] was displayed. Later in this document, we will explain how Cassini should be configured using the notation Cassini(path,vpath), where [path] is the name of the root folder of the server’s web directory tree and [vpath] is the associated virtual path. Recall that with the Cassini(path,vpath) server, the URL [http://localhost/vpath/XX] corresponds to the physical path [path\XX]. We will place all our documents under a physical root directory that we will call &lt;webroot&gt;. Thus, we can refer to the file &lt;webroot&gt;\chap2\here1.aspx. For each reader, this &lt;webroot&gt; directory will be a folder on their personal machine. Here, the screenshots will show that this folder is often [d:\data\devel\aspnet\poly]. However, this will not always be the case, as the tests were performed on different machines.</p>
-<p><a id="toc69179882"></a>
-<a id="toc69180140"></a></p>
+<p><a id="toc69180140"></a>
+<a id="toc69179882"></a></p>
 <h2 id="33-first-examples">3.3. First examples</h2>
 <p>We will present some simple examples of dynamic web pages created with VB.NET. Readers are encouraged to test them to verify that their development environment is properly installed. We will see that there are several ways to build an ASP.NET page. We will choose one for the rest of our development work.</p>
-<p><a id="toc69179883"></a>
-<a id="toc69180141"></a></p>
+<p><a id="toc69180141"></a>
+<a id="toc69179883"></a></p>
 <h3 id="331-basic-example-variant-1">3.3.1. Basic Example - Variant 1</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>We’ll revisit the example from the previous chapter. We’ll create the following [heure1.aspx] file:</p>
@@ -903,8 +903,8 @@
 <p>Let’s place the previous code in the file [&lt;webroot&gt;\chap2\heure1.aspx]. Let’s start Cassini(&lt;webroot&gt;,/aspnet) and request the URL [http://localhost/aspnet/chap2/heure1.aspx] in a browser:</p>
 <p><img src="images/10000000000001E70000007A24355C20.png" style="width:12.885cm;height:3.228cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E70000007A24355C20.png" /></p>
 <p>Once we get this result, we know that the development environment is correctly installed. The [heure1.aspx] page has been compiled since it contains VB.NET code. Its compilation produced a DLL file that was stored in a system folder and then executed by the Cassini server.</p>
-<p><a id="toc69179884"></a>
-<a id="toc69180142"></a></p>
+<p><a id="toc69180142"></a>
+<a id="toc69179884"></a></p>
 <h3 id="332-basic-example-variant-2">3.3.2. Basic example - variant 2</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>The [heure1.aspx] document mixes HTML code and VB.NET code. In such a simple example, this is not a problem. If you need to include more VB.NET code, you will want to separate the HTML code from the VB code more clearly. This can be done by enclosing the VB code within a &lt;script&gt; tag:</p>
@@ -933,8 +933,8 @@
 </code></pre></div>
 <p>We place the document [heure2.aspx] in the directory tree [&lt;webroot&gt;\chap2\heure2.aspx] on the Cassini web server (&lt;webroot&gt;,/aspnet) and request the document using a browser:</p>
 <p><img src="images/10000000000001F40000007715F0E4DD.png" style="width:13.229cm;height:3.149cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F40000007715F0E4DD.png" /></p>
-<p><a id="toc69179885"></a>
-<a id="toc69180143"></a></p>
+<p><a id="toc69180143"></a>
+<a id="toc69179885"></a></p>
 <h3 id="333-basic-example-variant-3">3.3.3. Basic Example - Variant 3</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>We take the separation of VB code and HTML code a step further by placing them in two separate files. The HTML code will be in the [heure3.aspx] file and the VB code in [heure3.aspx.vb]. The content of [heure3.aspx] will be as follows:</p>
@@ -994,8 +994,8 @@
 
 <p>The files [heure3.spx] and [heure3.aspx.vb] are located in [&lt;webroot&gt;\chap2]. Then, using a browser, we request the URL [http://localhost/aspnet/chap2/heure3.aspx] from the web server (&lt;webroot&gt;,/aspnet):</p>
 <p><img src="images/10000000000001F100000082B4F70899.png" style="width:13.15cm;height:3.44cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F100000082B4F70899.png" /></p>
-<p><a id="toc69179886"></a>
-<a id="toc69180144"></a></p>
+<p><a id="toc69180144"></a>
+<a id="toc69179886"></a></p>
 <h3 id="334-basic-example-variant-4">3.3.4. Basic Example - Variant 4</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>We use the same example as before, but we consolidate all the code into a single file [heure4.aspx]:</p>
@@ -1032,8 +1032,8 @@
 <p>This time, the VB code has been organized into procedures. We see the [Page_Load] procedure from the previous example. The goal here is to demonstrate that a standalone .aspx page (not linked to VB code in a separate file) is implicitly converted into a class derived from [Page]. Therefore, we can use the attributes, methods, and events of this class. This is what is done here, where we use the [Load] event of this class.</p>
 <p>The testing method is identical to the previous ones:</p>
 <p><img src="images/10000000000001F40000007B43B53408.png" style="width:13.229cm;height:3.254cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F40000007B43B53408.png" /></p>
-<p><a id="toc69179887"></a>
-<a id="toc69180145"></a></p>
+<p><a id="toc69180145"></a>
+<a id="toc69179887"></a></p>
 <h3 id="335-basic-example-variant-5">3.3.5. Basic Example - Variant 5</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>As in Example 3, we separate the VB code and HTML code into two separate files. The VB code is placed in [heure5.aspx.vb]:</p>
@@ -1085,8 +1085,8 @@
 <p><img src="images/100000000000012D0000004E1C588EAC.png" style="width:7.964cm;height:2.064cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012D0000004E1C588EAC.png" /></p>
 <p>We’re ready. We request the URL [http://localhost/aspnet/chap2/heure5.aspx] from the Cassini server (&lt;webroot&gt;,/aspnet):</p>
 <p><img src="images/10000000000001EB0000007E32B2E5BB.png" style="width:12.991cm;height:3.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB0000007E32B2E5BB.png" /></p>
-<p><a id="toc69179888"></a>
-<a id="toc69180146"></a></p>
+<p><a id="toc69180146"></a>
+<a id="toc69179888"></a></p>
 <h3 id="336-basic-example-variant-6">3.3.6. Basic Example - Variant 6</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>We have shown so far that a dynamic web application has two components:</p>
@@ -1119,8 +1119,8 @@
 <p>Here, the controller constructs the entire response rather than just its dynamic parts. It also sends it. It does this using the [Response] property of type [HttpResponse] in the [Page] class. This object represents the server’s response to the client. The [HttpResponse] class has a [Write] method for writing to the HTML stream that will be sent to the client. Here, we store the entire HTML stream to be sent in the [HTML] variable and send it to the client using [Response.Write(HTML)].</p>
 <p>We request the URL [http://localhost/aspnet/chap2/heure6.aspx] from the Cassini server (&lt;webroot&gt;,/aspnet):</p>
 <p><img src="images/100000000000022B000000A4C9F8B55B.png" style="width:14.684cm;height:4.339cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022B000000A4C9F8B55B.png" /></p>
-<p><a id="toc69179889"></a>
-<a id="toc69180147"></a></p>
+<p><a id="toc69180147"></a>
+<a id="toc69179889"></a></p>
 <h3 id="337-conclusion">3.3.7. Conclusion</h3>
 <p>Next, we will use Method 3, which places the VB code and the HTML code of a dynamic web document into two separate files. This method has the advantage of splitting a web page into two components:</p>
 <ol>
@@ -1183,9 +1183,9 @@
           https://tahe.developpez.com
         </a>
         <br>
-        This tutorial, written by <strong>Serge Tahé</strong>, is made available to the public under the terms of the
-        <em>Creative Commons Attribution – Non-Commercial –
-        ShareAlike 3.0 Unported Licence</em>.
+        This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
       </div>
 
     </div>
