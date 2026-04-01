@@ -1017,11 +1017,11 @@
 <p><a id="toc68706466"></a></p>
 <h2 id="51-introduction">5.1. Introduction</h2>
 <p>In the client-server relationship on the web, the client sends information to the server in the form of a string of parameters [<mark style="background-color: #ffe994">param1=val1&amp;param2=val2&amp;...</mark>]. In our previous examples, we most often built this string by hand by requesting URLs of the form [<mark style="background-color: #ffe994">http://localhost/appli? param1=val1&amp;param2=val2&amp;...</mark>]. In reality, the information the client sends to the server comes from forms that the user has filled out. We explore how to build these forms in this chapter. We also introduce the WebMatrix tool, which will allow us to design user interfaces. The installation of this tool is described in the appendices.</p>
-<p><a id="toc68706467"></a>
-<a id="toc69183355"></a></p>
+<p><a id="toc69183355"></a>
+<a id="toc68706467"></a></p>
 <h2 id="52-the-html-language">5.2. The HTML Language</h2>
-<p><a id="toc68706468"></a>
-<a id="toc69183356"></a></p>
+<p><a id="toc69183356"></a>
+<a id="toc68706468"></a></p>
 <h3 id="521-an-example">5.2.1. An example</h3>
 <p>Consider the following example, created with [Web Matrix], which displays:</p>
 <ul>
@@ -1651,8 +1651,8 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>type=&quot;hidden&quot;</b>: specifies that this is a hidden field. A hidden field is part of the form but is not displayed to the user. However, if the user were to ask their browser to display the source code, they would see the presence of the &lt;input type=&quot;hidden&quot; value=&quot;...&quot;&gt; tag and thus the value of the hidden field.</div><div style="margin:0 0 0.5em 0"><b>value=&quot;aValue&quot;</b>: value of the hidden field.</div><div style="margin:0 0 0.5em 0">What is the purpose of the hidden field? It allows the web server to retain information across a client’s requests. Consider a web shopping application. The client purchases an initial item <i>art1 </i>in quantity <i>q1 </i>on the first page of a catalog and then moves to a new page in the catalog. To remember that the client purchased <i>q1 </i>items <i>of art1</i>, the server can place these two pieces of information in a hidden field on the web form of the new page. On this new page, the client purchases <i>q2 </i>units of item <i>art2</i>. When the data from this second form is submitted to the server, the server will not only receive the information (<i>q2</i>,<i>art2</i>) but also (<i>q1</i>,<i>art1</i>), which is also part of the form as a hidden field that cannot be modified by the user. The web server will then place the information (<i>q1</i>,<i>art1</i>) and (<i>q2</i>,<i>art2</i>) into a new hidden field and send a new catalog page. And so on.</div></td></tr></table>
 
-<p><a id="toc68706482"></a>
-<a id="toc69183357"></a></p>
+<p><a id="toc69183357"></a>
+<a id="toc68706482"></a></p>
 <h2 id="53-sending-form-values-to-a-web-server-via-a-browser">5.3. Sending form values to a web server via a browser</h2>
 <p>We already know, from the previous chapter, how a client transmits information to the server. It does so either by:</p>
 <ul>

@@ -885,13 +885,13 @@
 
 
 
-<p><a id="toc69180234"></a>
-<a id="toc69180331"></a></p>
+<p><a id="toc69180331"></a>
+<a id="toc69180234"></a></p>
 <h1 id="4-the-fundamentals-of-aspnet-development">4. The Fundamentals of ASP.NET Development</h1>
 <p><a id="toc69180332"></a></p>
 <h2 id="41-the-concept-of-an-aspnet-web-application">4.1. The Concept of an ASP.NET Web Application</h2>
-<p><a id="toc69180333"></a>
-<a id="toc69180235"></a></p>
+<p><a id="toc69180235"></a>
+<a id="toc69180333"></a></p>
 <h3 id="411-introduction">4.1.1. Introduction</h3>
 <p>A web application is an application that brings together various documents (HTML, .NET code, images, sounds, etc.). These documents must be located under a single root directory, known as the web application root. A virtual path on the web server is associated with this root. We have encountered the concept of a virtual directory for the Cassini web server. This concept also exists for the IIS web server. An important difference between the two servers is that at any given time, IIS can have any number of virtual directories, whereas the Cassini web server has only one—the one specified at startup. This means that the IIS server can serve multiple web applications simultaneously, whereas the Cassini server serves only one at a time. In the previous examples, the Cassini server was always launched with the parameters (&lt;webroot&gt;,/aspnet) that associated the virtual folder /aspnet with the physical folder &lt;webroot&gt;.  The web server therefore always served the same web application. This did not prevent us from writing and testing different, independent pages within this single web application. Each web application has its own resources, located under its physical root &lt;webroot&gt;:</p>
 <ul>
@@ -926,8 +926,8 @@
 </ul>
 
 <p>To adhere to this web application concept, the upcoming examples will all be placed in an &lt;application-path&gt; folder specific to the application, which will be associated with a virtual &lt;application-vpath&gt; folder, as the Cassini server is launched to link these two parameters.</p>
-<p><a id="toc69180334"></a>
-<a id="toc69180236"></a></p>
+<p><a id="toc69180236"></a>
+<a id="toc69180334"></a></p>
 <h3 id="412-configuring-a-web-application">4.1.2. Configuring a web application</h3>
 <p>If &lt;application-path&gt; is the root of an ASP.NET application, you can use the &lt;application-path&gt;\web.config file to configure it. This file is in XML format. Here is an example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
@@ -987,11 +987,11 @@
 </code></pre></div>
 <p>Let &lt;application-path&gt; be the folder containing the three application files. The Cassini server is launched with the parameters (&lt;application-path&gt;,/aspnet/config1). We request the URL [<mark style="background-color: #ffe994">http://localhost/aspnet/config1</mark>]. Since [config1] is a folder, the web server will look for a file named [default.aspx] inside it and display it if found. In this case, it will find it:</p>
 <p><img src="images/10000000000001AE000000923FD1205A.png" style="width:11.377cm;height:3.863cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AE000000923FD1205A.png" /></p>
-<p><a id="toc69180335"></a>
-<a id="toc69180237"></a></p>
+<p><a id="toc69180237"></a>
+<a id="toc69180335"></a></p>
 <h3 id="413-application-session-context">4.1.3. Application, Session, Context</h3>
-<p><a id="toc69180336"></a>
-<a id="toc69180238"></a></p>
+<p><a id="toc69180238"></a>
+<a id="toc69180336"></a></p>
 <h4 id="4131-the-globalasax-file">4.1.3.1. The global.asax file</h4>
 <p>The code in the [global.asax] file is always executed before the page requested by the current request is loaded. It must be located in the &lt;application-path&gt; root of the application. If it exists, the [global.asax] file is used at various times by the web server:</p>
 <ol>
@@ -1073,8 +1073,8 @@
 </ul>
 
 <p>If none of these events need to be handled, then the [global.asax] file can be ignored. This is what was done in the first examples of this chapter. </p>
-<p><a id="toc69180337"></a>
-<a id="toc69180239"></a></p>
+<p><a id="toc69180239"></a>
+<a id="toc69180337"></a></p>
 <h4 id="4132-example-1">4.1.3.2. Example 1</h4>
 <p>Let’s develop an application to better understand the three key moments: application startup, session startup, and a client request. The [global.asax] file will look like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;%@ Application src=&quot;Global.asax.vb&quot; Inherits=&quot;global&quot; %&gt;
@@ -1222,8 +1222,8 @@
   </li>
 </ul>
 
-<p><a id="toc69180338"></a>
-<a id="toc69180240"></a></p>
+<p><a id="toc69180240"></a>
+<a id="toc69180338"></a></p>
 <h4 id="4133-an-overview">4.1.3.3. An Overview</h4>
 <p>With what we have learned so far, we can create a preliminary diagram explaining how a web server and the web applications it serves work:</p>
 <p><img src="images/10000000000005C5000003897323D62A.png" style="width:17.999cm;height:11.028cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C5000003897323D62A.png" /></p>
@@ -1269,8 +1269,8 @@
   </li>
 </ul>
 
-<p><a id="toc69180339"></a>
-<a id="toc69180241"></a></p>
+<p><a id="toc69180241"></a>
+<a id="toc69180339"></a></p>
 <h4 id="4134-example-2">4.1.3.4. Example 2</h4>
 <p>Let’s develop a new example illustrating what we’ve just covered. We’ll place the following files in the same folder:</p>
 <p>[<strong>global.asax</strong>]</p>
@@ -1361,8 +1361,8 @@
 <p>We can see that the session token has changed, indicating a new client. This is reflected in the number of client requests. Now let’s return to the first browser and request the same URL again:</p>
 <p><img src="images/10000000000001FC0000008DC0779ED7.png" style="width:13.441cm;height:3.731cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FC0000008DC0779ED7.png" /></p>
 <p>The number of requests made to the application is correctly counted.</p>
-<p><a id="toc69180340"></a>
-<a id="toc69180242"></a></p>
+<p><a id="toc69180242"></a>
+<a id="toc69180340"></a></p>
 <h4 id="4135-the-need-to-synchronize-an-applications-clients">4.1.3.5. The Need to Synchronize an Application’s Clients</h4>
 <p>In the previous application, the counter for requests made to the application is incremented in the [Form_Load] procedure of the [main.aspx] page as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>        &#39; one more request for the application
@@ -1452,8 +1452,8 @@
 </ul>
 
 <p>What can we conclude? Nothing definitive. Perhaps the web server does not begin executing a request from a client if that client already has one in progress? There would therefore never be simultaneous execution of requests from the same client. They would be executed one after the other. This point needs to be verified. It may indeed depend on the type of client used.</p>
-<p><a id="toc69180341"></a>
-<a id="toc69180243"></a></p>
+<p><a id="toc69180243"></a>
+<a id="toc69180341"></a></p>
 <h4 id="4136-client-synchronization">4.1.3.6. Client synchronization</h4>
 <p>The problem highlighted in the previous application is a classic (but not easy to solve) problem of exclusive access to a resource. In our specific case, we must ensure that two clients, A and B, cannot both be in the code sequence at the same time:</p>
 <ol>
@@ -1585,8 +1585,8 @@
 <p><img src="images/10000000000002D1000001C5C8FE5699.png" style="width:17.992cm;height:11.298cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D1000001C5C8FE5699.png" /></p>
 <p>This time, the application’s request counter is correct.</p>
 <p>The key takeaway from this lengthy demonstration is the absolute necessity of synchronizing clients of the same web application if they need to update elements shared by all clients.</p>
-<p><a id="toc69180342"></a>
-<a id="toc69180244"></a></p>
+<p><a id="toc69180244"></a>
+<a id="toc69180342"></a></p>
 <h4 id="4137-session-token-management">4.1.3.7. Session Token Management</h4>
 <p>We have discussed the session token exchanged between the client and the web server many times. Let’s review how it works:</p>
 <ul>
@@ -1944,11 +1944,11 @@
   </li>
 </ul>
 
-<p><a id="toc69180343"></a>
-<a id="toc69180245"></a></p>
+<p><a id="toc69180245"></a>
+<a id="toc69180343"></a></p>
 <h2 id="42-retrieving-information-from-a-client-request">4.2. Retrieving information from a client request</h2>
-<p><a id="toc69180344"></a>
-<a id="toc69180246"></a></p>
+<p><a id="toc69180246"></a>
+<a id="toc69180344"></a></p>
 <h3 id="421-the-client-server-web-request-response-cycle">4.2.1. The client-server web request-response cycle</h3>
 <p>Let’s review the client-server context of a web application:</p>
 <p><img src="images/10000000000005AC000001C9B49A634E.png" style="width:17.999cm;height:5.664cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AC000001C9B49A634E.png" /></p>
@@ -2002,8 +2002,8 @@
   </li>
 </ol>
 
-<p><a id="toc69180345"></a>
-<a id="toc69180247"></a></p>
+<p><a id="toc69180247"></a>
+<a id="toc69180345"></a></p>
 <h3 id="422-retrieving-information-sent-by-the-client">4.2.2. Retrieving Information Sent by the Client</h3>
 <p>We will now examine certain properties and methods of the [Request] object that allow the application code to access the client’s request and thus the information it has transmitted. The [Request] object is of type [HttpRequest]:</p>
 <p><img src="images/10000000000001540000004975AC4BB4.png" style="width:8.996cm;height:1.931cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001540000004975AC4BB4.png" /></p>
@@ -2022,8 +2022,8 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">combines several collections: QueryString, Form, ServerVariables, Cookies into a single collection.</div></td></tr></table>
 
-<p><a id="toc69180346"></a>
-<a id="toc69180248"></a></p>
+<p><a id="toc69180248"></a>
+<a id="toc69180346"></a></p>
 <h3 id="423-example-1">4.2.3. Example 1</h3>
 <p>Let’s implement these elements in a first example. The application will have only one element [main.aspx]. The presentation code [main.aspx] will be as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2197,8 +2197,8 @@
 <a id="__codelineno-36-27" name="__codelineno-36-27" href="#__codelineno-36-27"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>The reader is encouraged to review the controller code [main.aspx.vb] to understand this response.</p>
-<p><a id="toc69180347"></a>
-<a id="toc69180249"></a></p>
+<p><a id="toc69180249"></a>
+<a id="toc69180347"></a></p>
 <h3 id="424-example-2">4.2.4. Example 2</h3>
 <p>It is possible for the client to send multiple values for the same key. So what happens if, in the previous example, we request the URL [<mark style="background-color: #ffe994">http://localhost/request1/main.aspx?nom=tintin&amp;age=27&amp;nom=milou</mark>], where the key [name] appears twice? Let’s try it in a browser:</p>
 <p><img src="images/100000000000028D000000A9B8968247.png" style="width:17.277cm;height:4.471cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000028D000000A9B8968247.png" /></p>
@@ -2346,8 +2346,8 @@
 <a id="__codelineno-37-26" name="__codelineno-37-26" href="#__codelineno-37-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>We can see that the client receives standard HTML code for the two lists on the page. Information appears that we did not include ourselves, such as the hidden field [_VIEWSTATE]. This information was generated by the &lt;asp:xx runat=&quot;server&quot;&gt; tags. We will need to learn how to use these effectively.</p>
-<p><a id="toc69180348"></a>
-<a id="toc69180250"></a></p>
+<p><a id="toc69180250"></a>
+<a id="toc69180348"></a></p>
 <h2 id="43-implementing-an-mvc-architecture">4.3. Implementing an MVC Architecture</h2>
 <h3 id="431-the-concept">4.3.1. The Concept</h3>
 <p>Let’s conclude this long chapter by implementing an application built according to the MVC (Model-View-Controller) pattern. A web application designed according to this pattern looks like this:</p>
