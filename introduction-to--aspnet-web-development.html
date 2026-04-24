@@ -747,11 +747,11 @@
 
 
 <p><a id="toc57014748"></a>
-<a id="toc69179879"></a>
-<a id="toc69180137"></a></p>
+<a id="toc69180137"></a>
+<a id="toc69179879"></a></p>
 <h1 id="3-introduction-to-aspnet-web-development">3. Introduction to  ASP.NET Web Development</h1>
-<p><a id="toc69180138"></a>
-<a id="toc69179880"></a></p>
+<p><a id="toc69179880"></a>
+<a id="toc69180138"></a></p>
 <h2 id="31-introduction">3.1. Introduction</h2>
 <p>The previous chapter introduced the principles of web development, which are independent of the programming language used. Currently, three technologies dominate the web development market:</p>
 <ul>
@@ -765,7 +765,7 @@
 
 <p>The previous chapter presented brief examples for each of these three technologies. This document focuses on ASP.NET web development using the VB.NET language. We assume that you are familiar with this language. This point is important. Here, we are concerned solely with its use in the context of web development. Let’s elaborate on this point by discussing the MVC methodology for web development.</p>
 <p>A web application that follows the MVC model will be structured as follows:</p>
-<p><img src="images/1000000000000540000000F4AC812973.png" style="width:17.78cm;height:3.228cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000540000000F4AC812973.png" /></p>
+<p><img src="images/1000000000000540000000F4AC812973.png" width="672" height="122" style="width:17.78cm;height:3.228cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000540000000F4AC812973.png" /></p>
 <p>Such an architecture, known as a 3-tier or 3-level architecture, aims to adhere to the MVC (Model-View-Controller) model:</p>
 <ul>
   <li>the user interface is the V (the view)
@@ -782,7 +782,7 @@
   </li>
 </ul>
 
-<p><img src="images/10000000000007250000032054B6C323.png" style="width:17.999cm;height:7.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007250000032054B6C323.png" /></p>
+<p><img src="images/10000000000007250000032054B6C323.png" width="680" height="298" style="width:17.999cm;height:7.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007250000032054B6C323.png" /></p>
 <p>Within the [Application Logic] block, we can distinguish</p>
 <ul>
   <li>the controller class, which serves as the application’s entry point.
@@ -804,8 +804,8 @@
 </ul>
 
 <p>The unique aspect of web development lies in writing the controller class and the presentation pages. The business and data access classes are standard .NET classes that can be used in a web application as well as in a Windows application or even a console application. Writing these classes requires a solid understanding of object-oriented programming. In this document, they will be written in VB.NET, so we assume that you are proficient in this language. From this perspective, there is no need to dwell on the data access code more than necessary. In almost all books on ASP.NET, a chapter is devoted to ADO.NET. The diagram above shows that data access is handled by standard .NET classes that are unaware they are being used in a web context. The controller, which acts as the team leader of the web application, does not need to worry about ADO.NET. It simply needs to know which class to request the required data from and how to request it. That’s all. Placing ADO.NET code in the controller violates the MVC concept explained above, and we will not do so.</p>
-<p><a id="toc69180139"></a>
-<a id="toc69179881"></a></p>
+<p><a id="toc69179881"></a>
+<a id="toc69180139"></a></p>
 <h2 id="32-tools">3.2. Tools</h2>
 <p>This document is intended for students, so we will work with free tools available for download on the internet:</p>
 <ul>
@@ -829,17 +829,17 @@
 
 <p>An excellent commercial environment for developing in VB.NET is Microsoft’s Visual Studio.NET. This feature-rich IDE allows you to manage all kinds of documents (VB.NET code, HTML documents, XML, style sheets, etc.). For writing code, it provides the invaluable assistance of automatic code &quot;completion.&quot; That said, this tool, which significantly improves developer productivity, has a downside: it confines the developer to a standard development mode that is certainly efficient but not always appropriate.</p>
 <p>It is possible to use the Cassini server outside of [WebMatrix], and that is what we will often do. The server executable is located at &lt;WebMatrix&gt;\&lt;version&gt;\WebServer.exe, where &lt;WebMatrix&gt; is the [WebMatrix] installation directory and &lt;version&gt; is its version number:</p>
-<p><img src="images/10000000000001750000011B3CCCC791.png" style="width:9.869cm;height:7.488cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001750000011B3CCCC791.png" /></p>
+<p><img src="images/10000000000001750000011B3CCCC791.png" width="373" height="283" style="width:9.869cm;height:7.488cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001750000011B3CCCC791.png" /></p>
 <p>Let’s open a Command Prompt window and navigate to the Cassini server folder:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>E:\Program Files\Microsoft ASP.NET Web Matrix\v0.6.812&gt;dir
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>...
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>05/29/2003  11:00               53,248 WebServer.exe
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>29/05/2003  11:00               53 248 WebServer.exe
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>...
 </code></pre></div>
 <p>Let&#x27;s run [WebServer.exe] without any parameters:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>E:\Program Files\Microsoft ASP.NET Web Matrix\v0.6.812&gt;webserver
 </code></pre></div>
-<p><img src="images/10000000000001DD000001517C46003F.png" style="width:12.621cm;height:8.916cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DD000001517C46003F.png" /></p>
+<p><img src="images/10000000000001DD000001517C46003F.png" width="477" height="337" style="width:12.621cm;height:8.916cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DD000001517C46003F.png" /></p>
 <p>The panel above shows that the [WebServer/Cassini] application accepts three parameters:</p>
 <ul>
   <li><b>/port</b>: port number of the web service. Can be any number. The default value is 80
@@ -857,40 +857,40 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>dos&gt; WebServer /port:80 /path:D:\data\devel\aspnet\poly vpath:/aspnet
 </code></pre></div>
 <p>You can save this command as a shortcut. Once launched, Cassini places an icon in the taskbar. Double-clicking it opens a server Start/Stop panel:</p>
-<p><img src="images/10000000000001A9000000DE66B70DC8.png" style="width:11.245cm;height:5.874cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A9000000DE66B70DC8.png" /></p>
+<p><img src="images/10000000000001A9000000DE66B70DC8.png" width="425" height="222" style="width:11.245cm;height:5.874cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A9000000DE66B70DC8.png" /></p>
 <p>The panel displays the three parameters used to launch it. It offers two start/stop buttons as well as a test link to the root of its web directory tree. We click it. A browser opens and the URL [http://localhost/aspnet] is requested. We see the contents of the folder specified in the [Physical Path] field above:</p>
-<p><img src="images/10000000000001AA000000B22296C0D4.png" style="width:11.271cm;height:4.71cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AA000000B22296C0D4.png" /></p>
+<p><img src="images/10000000000001AA000000B22296C0D4.png" width="426" height="178" style="width:11.271cm;height:4.71cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AA000000B22296C0D4.png" /></p>
 <p>In this example, the requested URL corresponds to a folder rather than a web document, so the server displayed the contents of that folder rather than a specific web document. If there is a file named [default.aspx] in this folder, it will be displayed. For example, let’s create the following file and place it in the root of Cassini’s web tree (d:\data\devel\aspnet\poly here):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Home Page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Page d&#39;entrée<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    Index page...
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    Page d&#39;index...
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">dos</span><span class="o">&gt;</span><span class="nb">dir</span> <span class="n">d</span><span class="p">:</span>\<span class="n">data</span>\<span class="n">devel</span>\<span class="n">aspnet</span>\<span class="n">poly</span>\<span class="n">default</span><span class="o">.</span><span class="n">aspx</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="mi">03</span><span class="o">/</span><span class="mi">23</span><span class="o">/</span><span class="mi">2004</span>  <span class="mi">6</span><span class="p">:</span><span class="mi">21</span> <span class="n">PM</span>                  <span class="mi">107</span> <span class="n">default</span><span class="o">.</span><span class="n">aspx</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="mi">23</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">2004</span>  <span class="mi">18</span><span class="p">:</span><span class="mi">21</span>                  <span class="mi">107</span> <span class="n">default</span><span class="o">.</span><span class="n">aspx</span>
 </code></pre></div>
 <p>Now let&#x27;s request the URL [http://localhost/aspnet] using a browser:</p>
-<p><img src="images/10000000000001930000007E3010A7C6.png" style="width:10.663cm;height:3.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001930000007E3010A7C6.png" /></p>
+<p><img src="images/10000000000001930000007E3010A7C6.png" width="403" height="126" style="width:10.663cm;height:3.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001930000007E3010A7C6.png" /></p>
 <p>We see that in reality, the URL [http://localhost/aspnet/default.aspx] was displayed. Later in this document, we will explain how Cassini should be configured using the notation Cassini(path,vpath), where [path] is the name of the root folder of the server’s web directory tree and [vpath] is the associated virtual path. Recall that with the Cassini(path,vpath) server, the URL [http://localhost/vpath/XX] corresponds to the physical path [path\XX]. We will place all our documents under a physical root directory that we will call &lt;webroot&gt;. Thus, we can refer to the file &lt;webroot&gt;\chap2\here1.aspx. For each reader, this &lt;webroot&gt; directory will be a folder on their personal machine. Here, the screenshots will show that this folder is often [d:\data\devel\aspnet\poly]. However, this will not always be the case, as the tests were performed on different machines.</p>
-<p><a id="toc69180140"></a>
-<a id="toc69179882"></a></p>
+<p><a id="toc69179882"></a>
+<a id="toc69180140"></a></p>
 <h2 id="33-first-examples">3.3. First examples</h2>
 <p>We will present some simple examples of dynamic web pages created with VB.NET. Readers are encouraged to test them to verify that their development environment is properly installed. We will see that there are several ways to build an ASP.NET page. We will choose one for the rest of our development work.</p>
-<p><a id="toc69180141"></a>
-<a id="toc69179883"></a></p>
+<p><a id="toc69179883"></a>
+<a id="toc69180141"></a></p>
 <h3 id="331-basic-example-variant-1">3.3.1. Basic Example - Variant 1</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>We’ll revisit the example from the previous chapter. We’ll create the following [heure1.aspx] file:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>ASP.NET Demo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Demo asp.net <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>      It is <span class="err">&lt;</span>% =Date.Now.ToString(&quot;T&quot;) %&gt;
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>      Il est <span class="err">&lt;</span>% =Date.Now.ToString(&quot;T&quot;) %&gt;
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -898,43 +898,43 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Date.Now.ToString(&quot;T&quot;)
 </code></pre></div>
 <p>generates a C string representing the current time. The &lt;% ... %&gt; tag is then replaced by this C string. So if C is the string 18:11:01, the HTML line containing the VB.NET code becomes:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>      It is 18:11:01
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>      Il est 18:11:01
 </code></pre></div>
 <p>Let’s place the previous code in the file [&lt;webroot&gt;\chap2\heure1.aspx]. Let’s start Cassini(&lt;webroot&gt;,/aspnet) and request the URL [http://localhost/aspnet/chap2/heure1.aspx] in a browser:</p>
-<p><img src="images/10000000000001E70000007A24355C20.png" style="width:12.885cm;height:3.228cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E70000007A24355C20.png" /></p>
+<p><img src="images/10000000000001E70000007A24355C20.png" width="487" height="122" style="width:12.885cm;height:3.228cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E70000007A24355C20.png" /></p>
 <p>Once we get this result, we know that the development environment is correctly installed. The [heure1.aspx] page has been compiled since it contains VB.NET code. Its compilation produced a DLL file that was stored in a system folder and then executed by the Cassini server.</p>
-<p><a id="toc69180142"></a>
-<a id="toc69179884"></a></p>
+<p><a id="toc69179884"></a>
+<a id="toc69180142"></a></p>
 <h3 id="332-basic-example-variant-2">3.3.2. Basic example - variant 2</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>The [heure1.aspx] document mixes HTML code and VB.NET code. In such a simple example, this is not a problem. If you need to include more VB.NET code, you will want to separate the HTML code from the VB code more clearly. This can be done by enclosing the VB code within a &lt;script&gt; tag:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">runat</span><span class="o">=</span><span class="s">&quot;server&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="err">&#39;</span><span class="w"> </span><span class="nx">calculation</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">displayed</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">HTML</span><span class="w"> </span><span class="nx">code</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="err">&#39;</span><span class="w"> </span><span class="nx">calcul</span><span class="w"> </span><span class="nx">des</span><span class="w"> </span><span class="nx">données</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="nx">afficher</span><span class="w"> </span><span class="nx">par</span><span class="w"> </span><span class="nx">le</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="nx">HTML</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">...</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>....
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>&#39; display of values calculated by the script
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>&#39; affichage des valeurs calculées par la partie script
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>The example [heure2.aspx] demonstrates this method:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">runat</span><span class="o">=</span><span class="s">&quot;server&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nx">Dim</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="nx">As</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">Now</span><span class="p">.</span><span class="nx">ToString</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nx">Dim</span><span class="w"> </span><span class="nx">maintenant</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nb">String</span><span class="o">=</span><span class="nb">Date</span><span class="p">.</span><span class="nx">Now</span><span class="p">.</span><span class="nx">ToString</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        ASP.NET Demo
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Demo asp.net <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        It is
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        <span class="err">&lt;</span>% =now %&gt;
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        Il est
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        <span class="err">&lt;</span>% =maintenant %&gt;
 <a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>We place the document [heure2.aspx] in the directory tree [&lt;webroot&gt;\chap2\heure2.aspx] on the Cassini web server (&lt;webroot&gt;,/aspnet) and request the document using a browser:</p>
-<p><img src="images/10000000000001F40000007715F0E4DD.png" style="width:13.229cm;height:3.149cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F40000007715F0E4DD.png" /></p>
-<p><a id="toc69180143"></a>
-<a id="toc69179885"></a></p>
+<p><img src="images/10000000000001F40000007715F0E4DD.png" width="500" height="119" style="width:13.229cm;height:3.149cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F40000007715F0E4DD.png" /></p>
+<p><a id="toc69179885"></a>
+<a id="toc69180143"></a></p>
 <h3 id="333-basic-example-variant-3">3.3.3. Basic Example - Variant 3</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>We take the separation of VB code and HTML code a step further by placing them in two separate files. The HTML code will be in the [heure3.aspx] file and the VB code in [heure3.aspx.vb]. The content of [heure3.aspx] will be as follows:</p>
@@ -942,11 +942,11 @@
 <span class="odt-code-line">&lt;%@ Page Language=&quot;vb&quot; src=&quot;heure3.aspx.vb&quot; Inherits=&quot;heure3&quot; %&gt;</span>
 <span class="odt-code-line">&lt;html&gt;</span>
 <span class="odt-code-line">    &lt;head&gt;</span>
-<span class="odt-code-line">        &lt;title&gt;ASP.NET Demo&lt;/title&gt;</span>
+<span class="odt-code-line">        &lt;title&gt;Demo asp.net&lt;/title&gt;</span>
 <span class="odt-code-line">    &lt;/head&gt;</span>
 <span class="odt-code-line">    &lt;body&gt;</span>
-<span class="odt-code-line">        It is</span>
-<span class="odt-code-line">        &lt;% =now %&gt;</span>
+<span class="odt-code-line">        Il est</span>
+<span class="odt-code-line">        &lt;% =maintenant %&gt;</span>
 <span class="odt-code-line">    &lt;/body&gt;</span>
 <span class="odt-code-line">&lt;/html&gt;<span style="color:#0000ff"></span></span>
 </code></pre></div>
@@ -964,12 +964,12 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">heure3</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="c">&#39; data from the web page to be displayed</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="k">Protected</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="c">&#39; data of the web page to be displayed</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="k">Protected</span><span class="w"> </span><span class="n">maintenant</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="k">Private</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">Page_Load</span><span class="p">(</span><span class="k">ByVal</span><span class="w"> </span><span class="n">sender</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Object</span><span class="p">,</span><span class="w"> </span><span class="k">ByVal</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventArgs</span><span class="p">)</span><span class="w"> </span><span class="k">Handles</span><span class="w"> </span><span class="k">MyBase</span><span class="p">.</span><span class="n">Load</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">        </span><span class="c">&#39;calculate the web page data</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Date</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">        </span><span class="c">&#39;calculates the web page data</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="n">maintenant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Date</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">)</span>
 <a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 <a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
@@ -993,59 +993,59 @@
 </ul>
 
 <p>The files [heure3.spx] and [heure3.aspx.vb] are located in [&lt;webroot&gt;\chap2]. Then, using a browser, we request the URL [http://localhost/aspnet/chap2/heure3.aspx] from the web server (&lt;webroot&gt;,/aspnet):</p>
-<p><img src="images/10000000000001F100000082B4F70899.png" style="width:13.15cm;height:3.44cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F100000082B4F70899.png" /></p>
-<p><a id="toc69180144"></a>
-<a id="toc69179886"></a></p>
+<p><img src="images/10000000000001F100000082B4F70899.png" width="497" height="130" style="width:13.15cm;height:3.44cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F100000082B4F70899.png" /></p>
+<p><a id="toc69179886"></a>
+<a id="toc69180144"></a></p>
 <h3 id="334-basic-example-variant-4">3.3.4. Basic Example - Variant 4</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>We use the same example as before, but we consolidate all the code into a single file [heure4.aspx]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="na">&lt;script runat=&quot;server&quot;&gt;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="c">&#39; data from the web page to display</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">Private</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="c">&#39; data of the web page to be displayed</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">Private</span><span class="w"> </span><span class="n">maintenant</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="c">&#39; event page_load</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="c">&#39; evt page_load</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="k">Private</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">Page_Load</span><span class="p">(</span><span class="k">ByVal</span><span class="w"> </span><span class="n">sender</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Object</span><span class="p">,</span><span class="w"> </span><span class="k">ByVal</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventArgs</span><span class="p">)</span><span class="w"> </span><span class="k">Handles</span><span class="w"> </span><span class="k">MyBase</span><span class="p">.</span><span class="n">Load</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="c">&#39;calculate the web page data</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Date</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="c">&#39;calculates the web page data</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="n">maintenant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Date</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">)</span>
 <a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 <a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="na">&lt;/script&gt;</span>
 <a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
 <a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="na">&lt;html&gt;</span>
 <a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span><span class="w"> </span><span class="n">Demo</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Demo</span><span class="w"> </span><span class="n">asp</span><span class="p">.</span><span class="n">net</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
 <a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
 <a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">        </span><span class="n">It</span><span class="w"> </span><span class="ow">is</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">%</span><span class="w"> </span><span class="o">=</span><span class="n">now</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">        </span><span class="n">Il</span><span class="w"> </span><span class="n">est</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">%</span><span class="w"> </span><span class="o">=</span><span class="n">maintenant</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
 <a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
 <a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="na">&lt;/html&gt;</span>
 </code></pre></div>
 <p>We see the same sequence as in Example 2:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">runat</span><span class="o">=</span><span class="s">&quot;server&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">....</span><span class="w"> </span><span class="nx">VB</span><span class="w"> </span><span class="nx">code</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">....</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="nx">VB</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>... HTML code
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>... code HTML
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>This time, the VB code has been organized into procedures. We see the [Page_Load] procedure from the previous example. The goal here is to demonstrate that a standalone .aspx page (not linked to VB code in a separate file) is implicitly converted into a class derived from [Page]. Therefore, we can use the attributes, methods, and events of this class. This is what is done here, where we use the [Load] event of this class.</p>
 <p>The testing method is identical to the previous ones:</p>
-<p><img src="images/10000000000001F40000007B43B53408.png" style="width:13.229cm;height:3.254cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F40000007B43B53408.png" /></p>
-<p><a id="toc69180145"></a>
-<a id="toc69179887"></a></p>
+<p><img src="images/10000000000001F40000007B43B53408.png" width="500" height="123" style="width:13.229cm;height:3.254cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F40000007B43B53408.png" /></p>
+<p><a id="toc69179887"></a>
+<a id="toc69180145"></a></p>
 <h3 id="335-basic-example-variant-5">3.3.5. Basic Example - Variant 5</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>As in Example 3, we separate the VB code and HTML code into two separate files. The VB code is placed in [heure5.aspx.vb]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">heure5</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="c">&#39; data from the web page to be displayed</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="k">Protected</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="c">&#39; data of the web page to be displayed</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="k">Protected</span><span class="w"> </span><span class="n">maintenant</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
 <a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="k">Private</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">Page_Load</span><span class="p">(</span><span class="k">ByVal</span><span class="w"> </span><span class="n">sender</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Object</span><span class="p">,</span><span class="w"> </span><span class="k">ByVal</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventArgs</span><span class="p">)</span><span class="w"> </span><span class="k">Handles</span><span class="w"> </span><span class="k">MyBase</span><span class="p">.</span><span class="n">Load</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">        </span><span class="c">&#39;Calculate the web page data</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">        </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Date</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">        </span><span class="c">&#39;calculates the web page data</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">        </span><span class="n">maintenant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Date</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">)</span>
 <a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 <a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
@@ -1054,39 +1054,39 @@
 <span class="odt-code-line">&lt;%@ Page Inherits=&quot;heure5&quot; %&gt;</span>
 <span class="odt-code-line">&lt;html&gt;</span>
 <span class="odt-code-line">    &lt;head&gt;</span>
-<span class="odt-code-line">        &lt;title&gt;ASP.NET Demo&lt;/title&gt;</span>
+<span class="odt-code-line">        &lt;title&gt;Demo asp.net&lt;/title&gt;</span>
 <span class="odt-code-line">    &lt;/head&gt;</span>
 <span class="odt-code-line">    &lt;body&gt;</span>
-<span class="odt-code-line">        It is</span>
-<span class="odt-code-line">        &lt;% =now %&gt;</span>
+<span class="odt-code-line">        Il est</span>
+<span class="odt-code-line">        &lt;% =maintenant %&gt;</span>
 <span class="odt-code-line">    &lt;/body&gt;</span>
 <span class="odt-code-line">&lt;/html&gt;<span style="color:#0000ff"></span></span>
 </code></pre></div>
 
 <p>This time, the [Page] directive no longer specifies the link between the HTML code and the VB code. The web server can no longer locate the VB code to compile it (the src attribute is missing). It is up to us to perform this compilation. In a DOS window, we therefore compile the VB class [heure5.aspx.vb]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>dos&gt;dir
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>03/23/2004  6:34 PM                  133 heure1.aspx
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>03/24/2004  09:47                  232 heure2.aspx
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>03/24/2004  10:16                  183 heure3.aspx
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>03/24/2004  10:16                  332 time3.aspx.vb
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>03/24/2004  2:31 PM                  440 hour4.aspx
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>03/24/2004  14:45                  332 hour5.aspx.vb
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>03/24/2004  2:56 PM                  148 hour5.aspx
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>23/03/2004  18:34                  133 heure1.aspx
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>24/03/2004  09:47                  232 heure2.aspx
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>24/03/2004  10:16                  183 heure3.aspx
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>24/03/2004  10:16                  332 heure3.aspx.vb
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>24/03/2004  14:31                  440 heure4.aspx
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>24/03/2004  14:45                  332 heure5.aspx.vb
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>24/03/2004  14:56                  148 heure5.aspx
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>dos&gt;vbc /r:system.dll /r:system.web.dll /t:library /out:heure5.dll heure5.aspx.vb
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Microsoft (R) Visual Basic .NET Compiler version 7.10.3052.4
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Compilateur Microsoft (R) Visual Basic .NET version 7.10.3052.4
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>dos&gt;dir hour5.dll
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>03/24/2004  2:51 PM                3,072 heure5.dll
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>dos&gt;dir heure5.dll
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>24/03/2004  14:51                3 072 heure5.dll
 </code></pre></div>
 <p>In the example above, the compiler&#x27;s executable [vbc.exe] was in the DOS machine&#x27;s PATH. If it had not been, you would have had to specify the full path to [vbc.exe], which is located in the directory tree where the .NET SDK was installed. Classes derived from [Page] require resources present in the DLLs [system.dll, system.web.dll], hence the reference to them via the compiler’s /r option. The /t:library option is used to indicate that we want to generate a DLL. The /out option specifies the name of the file to be generated, in this case [heure5.dll]. This file contains the [heure5] class required by the web document [heure5.aspx]. However, the web server looks for the DLLs it needs in specific locations. One of these locations is the [bin] folder located at the root of its directory tree. This root is what we have called &lt;webroot&gt;. For the IIS server, this is generally &lt;drive&gt;:\inetpub\wwwroot, where &lt;drive&gt; is the drive (C, D, ...) where IIS was installed. For the Cassini server, this root corresponds to the /path parameter used when you launched it. Remember that this value can be obtained by double-clicking the server icon in the taskbar:</p>
-<p><img src="images/10000000000001A9000000DC78182022.png" style="width:11.245cm;height:5.821cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A9000000DC78182022.png" /></p>
+<p><img src="images/10000000000001A9000000DC78182022.png" width="425" height="220" style="width:11.245cm;height:5.821cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A9000000DC78182022.png" /></p>
 <p>&lt;webroot&gt; corresponds to the [Physical Path] attribute above. We therefore create a &lt;webroot&gt;\bin folder and place [heure5.dll] inside it:</p>
-<p><img src="images/100000000000012D0000004E1C588EAC.png" style="width:7.964cm;height:2.064cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012D0000004E1C588EAC.png" /></p>
+<p><img src="images/100000000000012D0000004E1C588EAC.png" width="301" height="78" style="width:7.964cm;height:2.064cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012D0000004E1C588EAC.png" /></p>
 <p>We’re ready. We request the URL [http://localhost/aspnet/chap2/heure5.aspx] from the Cassini server (&lt;webroot&gt;,/aspnet):</p>
-<p><img src="images/10000000000001EB0000007E32B2E5BB.png" style="width:12.991cm;height:3.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB0000007E32B2E5BB.png" /></p>
-<p><a id="toc69180146"></a>
-<a id="toc69179888"></a></p>
+<p><img src="images/10000000000001EB0000007E32B2E5BB.png" width="491" height="126" style="width:12.991cm;height:3.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB0000007E32B2E5BB.png" /></p>
+<p><a id="toc69179888"></a>
+<a id="toc69180146"></a></p>
 <h3 id="336-basic-example-variant-6">3.3.6. Basic Example - Variant 6</h3>
 <p><strong>Required tools</strong>: a text editor, the Cassini web server</p>
 <p>We have shown so far that a dynamic web application has two components:</p>
@@ -1106,21 +1106,21 @@
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="k">Private</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">Page_Load</span><span class="p">(</span><span class="k">ByVal</span><span class="w"> </span><span class="n">sender</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Object</span><span class="p">,</span><span class="w"> </span><span class="k">ByVal</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventArgs</span><span class="p">)</span><span class="w"> </span><span class="k">Handles</span><span class="w"> </span><span class="k">MyBase</span><span class="p">.</span><span class="n">Load</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="c">&#39; build the response</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="c">&#39; we work out the answer</span>
 <a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="k">Dim</span><span class="w"> </span><span class="n">HTML</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">        </span><span class="n">HTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;heure6&lt;/title&gt;&lt;/head&gt;&lt;body&gt;It is &quot;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">        </span><span class="n">HTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;heure6&lt;/title&gt;&lt;/head&gt;&lt;body&gt;Il est &quot;</span>
 <a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">        </span><span class="n">HTML</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="kt">Date</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">)</span>
 <a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">        </span><span class="n">HTML</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">        </span><span class="c">&#39; send it</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">        </span><span class="c">&#39; we send it</span>
 <a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">        </span><span class="n">Response</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">HTML</span><span class="p">)</span>
 <a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 <a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
 <p>Here, the controller constructs the entire response rather than just its dynamic parts. It also sends it. It does this using the [Response] property of type [HttpResponse] in the [Page] class. This object represents the server’s response to the client. The [HttpResponse] class has a [Write] method for writing to the HTML stream that will be sent to the client. Here, we store the entire HTML stream to be sent in the [HTML] variable and send it to the client using [Response.Write(HTML)].</p>
 <p>We request the URL [http://localhost/aspnet/chap2/heure6.aspx] from the Cassini server (&lt;webroot&gt;,/aspnet):</p>
-<p><img src="images/100000000000022B000000A4C9F8B55B.png" style="width:14.684cm;height:4.339cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022B000000A4C9F8B55B.png" /></p>
-<p><a id="toc69180147"></a>
-<a id="toc69179889"></a></p>
+<p><img src="images/100000000000022B000000A4C9F8B55B.png" width="555" height="164" style="width:14.684cm;height:4.339cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022B000000A4C9F8B55B.png" /></p>
+<p><a id="toc69179889"></a>
+<a id="toc69180147"></a></p>
 <h3 id="337-conclusion">3.3.7. Conclusion</h3>
 <p>Next, we will use Method 3, which places the VB code and the HTML code of a dynamic web document into two separate files. This method has the advantage of splitting a web page into two components:</p>
 <ol>
