@@ -1053,9 +1053,9 @@
 
 
 
-<p><a id="toc68751682"></a></p>
+<p><span id="toc68751682" name="toc68751682" class="odt-bookmark-anchor"></span></p>
 <h1 id="7-asp-server-components-1">7. ASP Server Components - 1</h1>
-<p><a id="toc68751683"></a></p>
+<p><span id="toc68751683" name="toc68751683" class="odt-bookmark-anchor"></span></p>
 <h2 id="71-introduction">7.1. Introduction</h2>
 <p>In this chapter, we describe the technology recommended in ASP.NET for building the user interface. We know that there are two distinct phases in the web server’s processing of an .aspx page:</p>
 <ol>
@@ -1121,7 +1121,7 @@
 </code></pre></div>
 <p>With this information, the web server can determine the client’s capabilities, including the type of HTML code it can handle. Over time, there have been several versions of the HTML language. Modern browsers support the latest versions of the language, whereas older browsers do not. Depending on the HTTP [User-Agent:] header that the client sent it, the server will send the client a version HTML that it can understand. This is an interesting and useful idea because the developer then doesn’t have to worry about the type of client browser their application is running on.</p>
 <p>Finally, advanced IDE tools such as Visual Studio.NET, WebMatrix, ... enable a &quot;Windows-style&quot; design of the web interface. While these tools are not essential, they provide significant assistance to the developer. The developer designs the web interface using graphical components that they place on the interface. They have direct access to the properties of each interface component, which they can configure as desired. These properties are translated into the HTML code for rendering the interface as attributes of the component’s &lt;asp:&gt; tag. The benefit for the developer is that they do not have to memorize either the list or the syntax of the attributes for each tag. This is a significant advantage when one is not fully familiar with the server tag libraries provided by ASP.NET. Once this syntax is mastered, some developers may prefer to code the tags directly into the page’s presentation code without going through the graphic design phase. A IDE is then no longer necessary. A simple text editor suffices. Depending on your workflow, the focus is then on components (using a IDE) or tags (using a text editor). These two terms are equivalent. The component is the object that will be manipulated by the page control code. The IDE gives us access to its properties during the design phase. The values assigned to these properties are immediately translated into the component’s tag attributes in the presentation code. During runtime, the page’s control code will manipulate the component and assign values to some of its properties. The presentation code will generate the component’s HTML code using, on the one hand, the attributes set at design time for the corresponding server tag, and on the other hand, the values of the component’s properties calculated by the control code.</p>
-<p><a id="toc68751684"></a></p>
+<p><span id="toc68751684" name="toc68751684" class="odt-bookmark-anchor"></span></p>
 <h2 id="72-the-execution-context-of-the-examples">7.2. The execution context of the examples</h2>
 <p>We will illustrate the design of web interfaces based on server components using programs whose execution context will mostly be as follows:</p>
 <ol>
@@ -1136,9 +1136,9 @@
 </ol>
 
 <p>This is a very specific execution process outside of which certain concepts discussed below no longer function. We are no longer in a MVC architecture context in which a multi-page application is controlled by a specific page that we have called the &quot;application controller.&quot; In this type of architecture, form submissions target the controller and not the forms themselves. However, we will see that building a form with server components implies that this form is submitted to itself.</p>
-<p><a id="toc68751685"></a></p>
+<p><span id="toc68751685" name="toc68751685" class="odt-bookmark-anchor"></span></p>
 <h2 id="73-the-label-component">7.3. The Label Component</h2>
-<p><a id="toc68751686"></a></p>
+<p><span id="toc68751686" name="toc68751686" class="odt-bookmark-anchor"></span></p>
 <h3 id="731-usage">7.3.1. Usage</h3>
 <p>The &lt;<mark style="background-color: #ffe994">asp:label</mark>&gt; tag allows you to insert dynamic text into a page’s presentation code. It therefore does no more than the <mark style="background-color: #ffe994">&lt;%=variable%&gt; </mark>tag used up to now. Studying this first tag will help us understand how server tags work. We’ll create a page with a [form1.aspx.vb] control section and a [form1.aspx] presentation section. The goal is to display the time:</p>
 <p><img src="images/10000000000001DE000000796210296D.png" width="478" height="121" style="width:12.647cm;height:3.201cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DE000000796210296D.png" /></p>
@@ -1185,7 +1185,7 @@
 
 <p>The [Label] object has various properties, including the [Text] property, which represents the text that will be displayed by the corresponding &lt;asp:label&gt; tag. Here, we set this property to the current time. We do this in the [Form_Load] procedure of the controller, which is always executed. In the [Form_Init] procedure, which is also always executed but before the [Form_Load] procedure, we store the client request in a [request.txt] file in the application folder. We will have the opportunity to examine this file to understand certain aspects of how pages using server tags work.</p>
 <p>The [Label] object has numerous properties, methods, and events. The reader is encouraged to consult the documentation on the [Label] class to explore them. This will be the case throughout the rest of the text. For each tag, we present only the few properties we need.</p>
-<p><a id="toc68751687"></a></p>
+<p><span id="toc68751687" name="toc68751687" class="odt-bookmark-anchor"></span></p>
 <h3 id="732-tests">7.3.2. Tests</h3>
 <p>We place the files (form1.aspx, form1.aspx.vb) in a folder &lt;application-path&gt; and launch Cassini with the parameters (&lt;application-path&gt;,/form1). Then we request url and [http://localhost/form1/form1.aspx]. We get the following result:</p>
 <p><img src="images/10000000000001DC000000750359E6D2.png" width="476" height="117" style="width:12.594cm;height:3.096cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DC000000750359E6D2.png" /></p>
@@ -1220,7 +1220,7 @@
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span> <span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="n">Windows</span><span class="p">;</span> <span class="n">U</span><span class="p">;</span> <span class="n">Windows</span> <span class="n">NT</span> <span class="mf">5.1</span><span class="p">;</span> <span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span> <span class="n">rv</span><span class="p">:</span><span class="mf">1.7</span><span class="n">b</span><span class="p">)</span> <span class="n">Gecko</span><span class="o">/</span><span class="mi">20040316</span>
 </code></pre></div>
 <p>Nothing out of the ordinary.</p>
-<p><a id="toc68751688"></a></p>
+<p><span id="toc68751688" name="toc68751688" class="odt-bookmark-anchor"></span></p>
 <h3 id="733-building-the-application-with-webmatrix">7.3.3. Building the application with WebMatrix</h3>
 <p>We built the page layout code for [form1.aspx] by hand. This method is usable if you know the tags. A simple text editor is then sufficient to build the user interface. To get started, a graphical design tool combined with automatic code generation is often necessary because you don’t know the syntax of the tags you need. We will now build the same application using the WebMatrix tool. Once WebMatrix is launched, we select the option [File/New File]:</p>
 <p><img src="images/10000000000001D10000013138EBF520.png" width="465" height="305" style="width:12.303cm;height:8.07cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D10000013138EBF520.png" /></p>
@@ -1308,14 +1308,14 @@
 <p>We accept these values. The system’s default browser is automatically launched to open the url [http://localhost/form2.aspx]. We obtain the following result:</p>
 <p><img src="images/10000000000001B80000006C399B999E.png" width="440" height="108" style="width:11.642cm;height:2.858cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B80000006C399B999E.png" /></p>
 <p>From now on, we will mainly use the WebMatrix tool to facilitate the construction and testing of the short programs we will write.</p>
-<p><a id="toc68751689"></a></p>
+<p><span id="toc68751689" name="toc68751689" class="odt-bookmark-anchor"></span></p>
 <h2 id="74-the-literal-component">7.4. The Literal Component</h2>
-<p><a id="toc68751690"></a></p>
+<p><span id="toc68751690" name="toc68751690" class="odt-bookmark-anchor"></span></p>
 <h3 id="741-usage">7.4.1. Usage</h3>
 <p>The &lt;<mark style="background-color: #ffe994">asp:literal</mark>&gt; tag allows you to insert dynamic text into a page’s presentation code, similar to the &lt;asp:label&gt; tag. Its main attribute is [Text], which represents the text that will be inserted as-is into the page’s HTML flow. This tag is sufficient if you do not intend to format the text you want to insert into the HTML flow. In fact, while the [Label] class allows for formatting using attributes such as [BorderColor, BorderWidth, Font, ...], the [Literal] class has none of these attributes. The reader can reproduce the previous example in its entirety by replacing the [Label] component with a [Literal] component.</p>
-<p><a id="toc68751691"></a></p>
+<p><span id="toc68751691" name="toc68751691" class="odt-bookmark-anchor"></span></p>
 <h2 id="75-the-button-component">7.5. The Button Component</h2>
-<p><a id="toc68751692"></a></p>
+<p><span id="toc68751692" name="toc68751692" class="odt-bookmark-anchor"></span></p>
 <h3 id="751-usage">7.5.1. Usage</h3>
 <p>The &lt;<mark style="background-color: #ffe994">asp:Button</mark>&gt; tag allows you to insert a [Submit]-type button into a form, which brings with it event handling similar to that found in Windows applications. This is the point we want to explore further here. We create the following [form3.aspx] page:</p>
 <p><img src="images/10000000000002F3000000EC7EE1A1A6.png" width="377" height="118" style="width:9.987cm;height:3.122cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F3000000EC7EE1A1A6.png" /></p>
@@ -1363,7 +1363,7 @@
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>Note that we did not place the [Handles MyBase.Init] clause after the declaration of the [Page_Init] procedure. In fact, the [Init] event of the [Page] object has a default handler named [Page_Init]. If we use this handler name, the [Handles Page.Init] clause becomes unnecessary. However, including it does not cause an error.</p>
-<p><a id="toc68751693"></a></p>
+<p><span id="toc68751693" name="toc68751693" class="odt-bookmark-anchor"></span></p>
 <h3 id="752-tests">7.5.2. Tests</h3>
 <p>We launch the application under WebMatrix via [F5]. We get the following page:</p>
 <p><img src="images/10000000000001BA0000008B4DA0647B.png" width="442" height="139" style="width:11.695cm;height:3.678cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BA0000008B4DA0647B.png" /></p>
@@ -1415,7 +1415,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;__VIEWSTATE&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;dDwxNTY0NjIwMjUwOzs+2mcnJczeuvF2PEfvmtv7uiUhWUw=&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
 <p>This field represents, in an encoded form, the state of the form sent to the client. This state represents the value of all the form’s components. Since [__VIEWSTATE] is part of the form, its value will be posted along with the rest to the server. This will allow the server to know which form component has changed its value and, if necessary, to make decisions. These decisions will take the form of events such as &quot;the TextBox component has changed its value.&quot;</p>
-<p><a id="toc68751694"></a></p>
+<p><span id="toc68751694" name="toc68751694" class="odt-bookmark-anchor"></span></p>
 <h3 id="753-client-requests">7.5.3. Client requests</h3>
 <p>Once the page [form3.aspx] has loaded in the browser, let’s reload it and then examine the request that the browser sent to retrieve it. Recall that our application stores this request in the file [request.txt] in the application folder:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">GET</span> <span class="o">/</span><span class="n">form3</span><span class="o">.</span><span class="n">aspx</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
@@ -1456,7 +1456,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>__VIEWSTATE=dDwxNTY0NjIwMjUwOzs%2B2mcnJczeuvF2PEfvmtv7uiUhWUw%3D&amp;Button2=Bouton2
 </code></pre></div>
 <p>The value of the hidden field is always the same, but it is the value of [Button2] that was posted. The server can therefore determine which button was used. It will use this to trigger an event that can be handled by the page once it has loaded.</p>
-<p><a id="toc68751695"></a></p>
+<p><span id="toc68751695" name="toc68751695" class="odt-bookmark-anchor"></span></p>
 <h3 id="754-handling-the-click-event-of-a-button-object">7.5.4. Handling the Click Event of a Button Object</h3>
 <p>Let’s review how an .aspx page works. It is an object derived from the [Page] class. Let’s call the derived class [unePage]. When the server receives a request for such a page, an object of type [unePage] is instantiated by a new unePage(...) operation. Then, the server generates two events called [Init] and [Load] in that order. The [unePage] object can handle them by providing the [Page_Init] and [Page_Load] event handlers. Then other events will be generated. We will have the opportunity to revisit this later. If the client’s request is a POST, the server will generate the [Click] event for the button that triggered this POST. If the [unePage] class has defined a handler for this event, it will be called. Let’s examine this mechanism using WebMatrix. In the [Design] tab of [form3.aspx], double-click the [Bouton1] button. We are then automatically taken to the [Code] tab, within the body of a procedure named [Button1_Click]. To better understand this, let’s go to the [All] tab and look at the entire code. The following changes have been made:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="err">&lt;</span>%@ Page Language=&quot;VB&quot; %&gt;
@@ -1567,7 +1567,7 @@
 <a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>We can see that the hidden field [__VIEWSTATE] has changed its value. This reflects the change in value of the component [lblInfo].</p>
-<p><a id="toc68751696"></a></p>
+<p><span id="toc68751696" name="toc68751696" class="odt-bookmark-anchor"></span></p>
 <h3 id="755-events-in-the-lifecycle-of-an-application-aspnet">7.5.5. Events in the Lifecycle of an Application ASP.NET</h3>
 <p>The ASP.NET documentation lists the events generated by the server during the life of an application:</p>
 <ul>
@@ -1636,9 +1636,9 @@
   </li>
 </ul>
 
-<p><a id="toc68751697"></a></p>
+<p><span id="toc68751697" name="toc68751697" class="odt-bookmark-anchor"></span></p>
 <h2 id="76-the-textbox-component">7.6. The TextBox component</h2>
-<p><a id="toc68751698"></a></p>
+<p><span id="toc68751698" name="toc68751698" class="odt-bookmark-anchor"></span></p>
 <h3 id="761-usage">7.6.1. Usage</h3>
 <p>The &lt;<mark style="background-color: #ffe994">asp:TextBox</mark>&gt; tag allows you to insert an input field into a page’s presentation code. We create a [form4.aspx] page to obtain the following layout:</p>
 <p><img src="images/10000000000003890000018607ED893E.png" width="452" height="195" style="width:11.972cm;height:5.159cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003890000018607ED893E.png" /></p>
@@ -1755,7 +1755,7 @@
 <a id="__codelineno-33-43" name="__codelineno-33-43" href="#__codelineno-33-43"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>We have added the [Page_Init] procedure to store the client&#x27;s request as in the previous example.</p>
-<p><a id="toc68751699"></a></p>
+<p><span id="toc68751699" name="toc68751699" class="odt-bookmark-anchor"></span></p>
 <h3 id="762-tests">7.6.2. Tests</h3>
 <p>We launch the application under WebMatrix via [F5]. We get the following page:</p>
 <p><img src="images/10000000000001BA000000B063B00629.png" width="442" height="176" style="width:11.695cm;height:4.657cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BA000000B063B00629.png" /></p>
@@ -1877,7 +1877,7 @@
 <p><img src="images/10000000000001C8000000FA788BF557.png" width="456" height="250" style="width:12.065cm;height:6.602cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C8000000FA788BF557.png" /></p>
 <p>Then place the cursor in field #1 and move it back to field #2. The page does not change. Why? Because we are not changing the value of field #1, the browser event [Change] does not occur when we leave that field. As a result, the form is not submitted to the server. So nothing changes on the page. It is the fact that the content of [lblInfo2] does not change that shows us there is no POST. If there were one, the server would detect that the content of [TextBox2] has changed and would need to reflect this in [lblInfo2].</p>
 <p>The lesson from this example is that there is no point in setting the [AutoPostBack] property of a [TextBox] to [true]. This causes unnecessary client-server round trips most of the time. </p>
-<p><a id="toc68751700"></a></p>
+<p><span id="toc68751700" name="toc68751700" class="odt-bookmark-anchor"></span></p>
 <h3 id="763-the-role-of-the-__viewstate-field">7.6.3. The role of the __VIEWSTATE field</h3>
 <p>We saw that the server systematically included a hidden field called __VIEWSTATE in the form it generated. We noted that this field represents the form’s state and that if this hidden field is returned to the server, the server can reconstruct the form’s previous value. A form’s state is the sum of the states of its components. Each component has a [EnableViewState] property with a Boolean value indicating whether or not the component’s state should be placed in the hidden field [__VIEWSATE]. By default, this property has the value [true], which means that the state of all components in a form is placed in [__VIEWSTATE]. Sometimes, this is not desirable.</p>
 <p>Let’s run a few tests to better understand the role of the [EnableViewState] property. Let’s set this property to [false] for both input fields:</p>
@@ -2097,7 +2097,7 @@
 <a id="__codelineno-53-16" name="__codelineno-53-16" href="#__codelineno-53-16"></a>        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <a id="__codelineno-53-17" name="__codelineno-53-17" href="#__codelineno-53-17"></a>........
 </code></pre></div>
-<p><a id="toc68751701"></a></p>
+<p><span id="toc68751701" name="toc68751701" class="odt-bookmark-anchor"></span></p>
 <h3 id="764-other-properties-of-the-textbox-component">7.6.4. Other properties of the TextBox component</h3>
 <p>The [TextBox] server component also allows you to generate the HTML &lt;input type=&quot;password&quot;..&gt; and &lt;textarea&gt;..&lt;/textarea&gt; tags, c.a.d. These tags correspond to a secure input field and a multi-line input field, respectively. This generation is controlled by the [TextMode] property of the [TextBox] component. It has three possible values:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>value</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>generated HTML tag</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
@@ -2158,7 +2158,7 @@
 <a id="__codelineno-61-24" name="__codelineno-61-24" href="#__codelineno-61-24"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>A little earlier, we provided a screenshot of a run.</p>
-<p><a id="toc68751702"></a></p>
+<p><span id="toc68751702" name="toc68751702" class="odt-bookmark-anchor"></span></p>
 <h2 id="77-the-dropdownlist-component">7.7. The DropDownList component</h2>
 <p>The &lt;<mark style="background-color: #ffe994">asp:DropDownList</mark>&gt; tag allows you to insert a drop-down list into a page’s presentation code. We create a [form6.aspx] page to obtain the following layout:</p>
 <p><img src="images/1000000000000319000000BD1A21342E.png" width="397" height="94" style="width:10.492cm;height:2.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000319000000BD1A21342E.png" /></p>
@@ -2331,7 +2331,7 @@
 <a id="__codelineno-85-37" name="__codelineno-85-37" href="#__codelineno-85-37"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-85-38" name="__codelineno-85-38" href="#__codelineno-85-38"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p><a id="toc68751703"></a></p>
+<p><span id="toc68751703" name="toc68751703" class="odt-bookmark-anchor"></span></p>
 <h2 id="78-the-listbox-component">7.8. The ListBox component</h2>
 <p>The &lt;<mark style="background-color: #ffe994">asp:ListBox</mark>&gt; tag allows you to insert a list into a page&#x27;s presentation code. We create [form7.aspx] to obtain the following presentation:</p>
 <p><img src="images/100000000000040500000241CB67B411.png" width="515" height="288" style="width:13.614cm;height:7.632cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000040500000241CB67B411.png" /></p>
@@ -2493,7 +2493,7 @@
 </ul>
 
 <p>First, we check whether there is at least one selected item in list l1; if not, there is nothing to do. To do this, we examine the property [l1.selectedindex], which represents the index of the first selected item in the list. If there are none, its value is -1. If there is at least one selected item in l1, we transfer it to l2. To do this, we iterate through the entire list of items in l1 and check for each one whether its attribute [selected] is true. If so, its [selected] attribute is set to [false], then it is copied to list l2, and finally it is removed from list l1. This removal causes the elements in list l1 to be renumbered. This is why the list of elements in l1 is traversed in reverse order. If we traverse it in forward order and delete element #10, element #11 becomes #10 and #12 becomes #11. After processing element #10, our forward loop will process element #11, which, as we just explained, is the former #12. The element that was #11 and is now #10 is overlooked. By traversing the elements of list l1 in the opposite direction, we avoid this problem.</p>
-<p><a id="toc68751704"></a></p>
+<p><span id="toc68751704" name="toc68751704" class="odt-bookmark-anchor"></span></p>
 <h2 id="79-the-components-checkbox-radiobutton">7.9. The components CheckBox, RadioButton</h2>
 <p>The &lt;<mark style="background-color: #ffe994">asp:RadioButton</mark>&gt; and &lt;<mark style="background-color: #ffe994">asp:CheckBox</mark>&gt; tags are used to insert a radio button and a checkbox, respectively, into a page&#x27;s layout code. We create a page named [form8.aspx] to produce the following layout:</p>
 <p><img src="images/100000000000027900000341D60DD65E.png" width="316" height="417" style="width:8.373cm;height:11.021cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000027900000341D60DD65E.png" /></p>
@@ -2597,7 +2597,7 @@
 <a id="__codelineno-107-9" name="__codelineno-107-9" href="#__codelineno-107-9"></a><span class="w">    </span><span class="n">End</span><span class="w"> </span><span class="n">Sub</span>
 </code></pre></div>
 <p>We want to display the state of the radio buttons and checkboxes in the form. We iterate through all the controls in the form. If the current control is of a type derived from [CheckBox], we display its [Checked] property. Since the [RadioButton] class is derived from the [CheckBox] class, the test applies to both types of controls. The screenshot shown above displays an example of the execution.</p>
-<p><a id="toc68751705"></a></p>
+<p><span id="toc68751705" name="toc68751705" class="odt-bookmark-anchor"></span></p>
 <h2 id="710-the-components-checkboxlist-radiobuttonlist">7.10. The components CheckBoxList, RadioButtonList</h2>
 <p>Sometimes, you want to allow the user to choose between values that are unknown at the time the page is designed. These choices come from a configuration file, a database, etc., and are only known at runtime. There are solutions to this problem, and we have encountered them. A single-select list works well when the user can make only one choice, and a multi-select list works well when the user can make multiple choices. From an aesthetic standpoint, and if the number of choices is not large, you may prefer to use radio buttons instead of the single-select list or checkboxes instead of the multi-select list. This is possible with the [CheckBoxList] and [RadioButtonList] components.</p>
 <p>The classes [CheckBoxList] and [RadioButtonList] are derived from the same class [ListControl] as the classes [DropDownList] and [ListBox] discussed previously. Therefore, we will find some of the properties and methods seen for these classes—those that actually belonged to [ListControl].</p>
@@ -2746,7 +2746,7 @@
 <a id="__codelineno-128-45" name="__codelineno-128-45" href="#__codelineno-128-45"></a><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>In the [Page_Load] procedure, which runs every time the page is loaded, both lists are initialized. To prevent them from being initialized every time, the [IsPostBack] property is used to ensure this happens only the first time. On subsequent runs, the lists will be regenerated automatically by the [VIEWSTATE] mechanism. Once the page is displayed, the user checks certain checkboxes and clicks the [Envoyer] button. The form values are then submitted to the form itself. After [Page_Load] is executed, the [btnEnvoyer_Click] procedure is executed. This procedure calls the [affiche] procedure to populate the [lstInfos] list. This procedure receives as a parameter an object of type [ListControl], which allows it to be passed either a [RadioButtonList] object or a [CheckBoxList] object, both of which are classes derived from [ListControl]. The list [lstInfos] can have its attribute set from [EnableViewState] to [false] since its state does not need to be maintained between different requests.</p>
-<p><a id="toc68751706"></a></p>
+<p><span id="toc68751706" name="toc68751706" class="odt-bookmark-anchor"></span></p>
 <h2 id="711-the-panel-components-linkbutton">7.11. The Panel Components, LinkButton</h2>
 <p>The &lt;<mark style="background-color: #ffe994">asp:panel</mark>&gt; tag allows you to insert a container of controls into a page. The advantage of the container is that some of its properties apply to all the controls it contains. This is the case with its [Visible] property. This property exists for every server control. If a container has the [Visible=false] property, each of its controls will be governed by its own [Visible] property. If it has the [Visible=false] property, then the container and everything it contains is not displayed. This can be simpler than managing the [Visible] property for each of the container’s controls.</p>
 <p>The &lt;<mark style="background-color: #ffe994">asp:LinkButton</mark>&gt; tag allows you to insert a link into a page’s presentation code. It serves a similar purpose to the [Button] button. It triggers a client-side event using an associated function. We create a page to produce the following layout:</p>
@@ -2838,7 +2838,7 @@
 <a id="__codelineno-135-11" name="__codelineno-135-11" href="#__codelineno-135-11"></a><span class="p">.....</span>
 <a id="__codelineno-135-12" name="__codelineno-135-12" href="#__codelineno-135-12"></a><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
 </code></pre></div>
-<p><a id="toc68751707"></a></p>
+<p><span id="toc68751707" name="toc68751707" class="odt-bookmark-anchor"></span></p>
 <h2 id="712-to-continue">7.12. To continue...</h2>
 <p>The preceding paragraphs have introduced a number of server components. Only a few of their properties were presented each time. To further explore these components, the reader can proceed in various ways:</p>
 <ul>
@@ -2849,7 +2849,7 @@
 </ul>
 
 <p>In this chapter, we used the all-in-one technique, [WebMatrix], where we placed the presentation code and the control code for a page in the same file. Generally speaking, we do not recommend this method but rather the so-called [codebehind] method used previously, which places these two codes in two separate files. We remind you that the advantage of this separation lies in the fact that the control code can be compiled without having to run the web application. Furthermore, our examples—as we explained at the beginning of the chapter—had a very specific profile: they consisted of a single page that was a form exchanged between the client and the server in successive request-response cycles, with the first client request being a GET, and the subsequent ones being POST.</p>
-<p><a id="toc68751708"></a></p>
+<p><span id="toc68751708" name="toc68751708" class="odt-bookmark-anchor"></span></p>
 <h2 id="713-server-and-application-controller-components">7.13. Server and Application Controller Components</h2>
 <p>In the previous chapters, we built several web applications. They were all built using the MVC (Model-View-Controller) architecture, which breaks the application down into distinct blocks and makes it easier to maintain. We built our user interfaces using standard HTML tags. Given what we’ve just covered, it’s natural to want to start using server components now. Let’s revisit a problem we’ve already studied at length: calculating a tax. Its MVC architecture was as follows:</p>
 <p><img src="images/10000000000007C60000033E438DB2AE.png" width="680" height="284" style="width:17.999cm;height:7.507cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007C60000033E438DB2AE.png" /></p>
@@ -2906,9 +2906,9 @@
 </ul>
 
 <p>This is an elegant solution that we will now implement in a few examples</p>
-<p><a id="toc68751709"></a></p>
+<p><span id="toc68751709" name="toc68751709" class="odt-bookmark-anchor"></span></p>
 <h2 id="714-examples-of-mvc-applications-with-asp-server-components">7.14. Examples of MVC applications with ASP server components</h2>
-<p><a id="toc68751710"></a></p>
+<p><span id="toc68751710" name="toc68751710" class="odt-bookmark-anchor"></span></p>
 <h3 id="7141-example-1">7.14.1. Example 1</h3>
 <p>In this first example, we implement the server components we have presented. The page [form10.aspx] will look as follows:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000146000002066420554B.png" width="327" height="518" style="display:inline-block; margin:4px;width:8.64cm;height:13.705cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000002066420554B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000DA000000CD9C976271.png" width="218" height="205" style="display:inline-block; margin:4px;width:5.768cm;height:5.424cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DA000000CD9C976271.png" /></td></tr></table>
@@ -3237,15 +3237,15 @@
 <a id="__codelineno-162-4" name="__codelineno-162-4" href="#__codelineno-162-4"></a><span class="w">    </span><span class="n">panelinfo</span><span class="p">.</span><span class="n">visible</span><span class="o">=</span><span class="k">false</span>
 <a id="__codelineno-162-5" name="__codelineno-162-5" href="#__codelineno-162-5"></a><span class="n">End</span><span class="w"> </span><span class="n">Sub</span>
 </code></pre></div>
-<p><a id="toc68751711"></a></p>
+<p><span id="toc68751711" name="toc68751711" class="odt-bookmark-anchor"></span></p>
 <h3 id="7142-example-2">7.14.2. Example 2</h3>
 <p>Here, we are revisiting an application previously covered that uses standard HTML forms. The application allows users to perform tax calculation simulations. It relies on a [impot] class, which we will not revisit here. This class requires data that it retrieves from a OLEDB data source. For this example, we will use a ACCESS data source.</p>
-<p><a id="toc68755189"></a></p>
+<p><span id="toc68755189" name="toc68755189" class="odt-bookmark-anchor"></span></p>
 <h4 id="71421-the-mvc-structure-of-the-application">7.14.2.1. The MVC structure of the application</h4>
 <p>The MVC structure of the application is as follows:</p>
 <p><img src="images/10000000000007CE000003491187B657.png" width="680" height="286" style="width:17.999cm;height:7.576cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007CE000003491187B657.png" /></p>
 <p>The three views will be incorporated into the presentation code of the [main.aspx] controller as containers. Therefore, this application has a single page, [main.aspx].</p>
-<p><a id="toc68755190"></a></p>
+<p><span id="toc68755190" name="toc68755190" class="odt-bookmark-anchor"></span></p>
 <h4 id="71422-web-application-views">7.14.2.2. Web application views</h4>
 <p>The [formulaire] view is the form for entering information used to calculate a user’s tax:</p>
 <p><img src="images/10000000000000EE000000AA6079DDEC.png" width="238" height="170" style="width:6.297cm;height:4.498cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EE000000AA6079DDEC.png" /></p>
@@ -3675,7 +3675,7 @@
 <p><img src="images/10000000000001D700000120E639D9FF.png" width="471" height="288" style="width:12.462cm;height:7.62cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D700000120E639D9FF.png" /></p>
 <p>If we rename the file ACCESS [impots.mdb] to [impots1.mdb], we will get the following page:</p>
 <p><img src="images/10000000000003C50000010114195D5D.png" width="680" height="181" style="width:17.992cm;height:4.789cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C50000010114195D5D.png" /></p>
-<p><a id="toc68751712"></a></p>
+<p><span id="toc68751712" name="toc68751712" class="odt-bookmark-anchor"></span></p>
 <h3 id="7143-example-3">7.14.3. Example 3</h3>
 <p>We have shown in these two examples that it is possible to build web applications that follow the MVC architecture using server components. The last example demonstrates that the solution using server components is simpler than the solution using standard HTML tags. Both of our examples had only one page with multiple views within the same page. It is possible to have a MVC architecture with multiple ASP server forms as long as the fact that these forms post their own values does not pose a problem. This is very often the case with applications that have menus. Let’s take the following example:</p>
 <p><img src="images/100000000000029E0000016D45ACBCC4.png" width="670" height="366" style="width:17.727cm;height:9.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000029E0000016D45ACBCC4.png" /></p>

@@ -1152,16 +1152,16 @@
 
 
 
-<p><a id="toc73957257"></a>
-<a id="toc72308720"></a></p>
+<p><span id="toc73957257" name="toc73957257" class="odt-bookmark-anchor"></span>
+<span id="toc72308720" name="toc72308720" class="odt-bookmark-anchor"></span></p>
 <h1 id="9-server-components-asp-3">9. Server components ASP - 3</h1>
-<p><a id="toc72308721"></a>
-<a id="toc73957258"></a></p>
+<p><span id="toc72308721" name="toc72308721" class="odt-bookmark-anchor"></span>
+<span id="toc73957258" name="toc73957258" class="odt-bookmark-anchor"></span></p>
 <h2 id="91-introduction">9.1. Introduction</h2>
 <p>We are continuing our work on the user interface by expanding the capabilities of the [DataList] and [DataGrid] components, particularly in the area of updating the data they display</p>
-<p><a id="toc73957259"></a></p>
+<p><span id="toc73957259" name="toc73957259" class="odt-bookmark-anchor"></span></p>
 <h2 id="92-managing-events-associated-with-data-from-data-bound-components">9.2. Managing events associated with data from data-bound components</h2>
-<p><a id="toc73957260"></a></p>
+<p><span id="toc73957260" name="toc73957260" class="odt-bookmark-anchor"></span></p>
 <h3 id="921-the-example">9.2.1. The example</h3>
 <p>Consider the following page:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000571000003E4D5790870.png" width="680" height="486" style="display:inline-block; margin:4px;width:17.999cm;height:12.869cm;" class="odt-zoomable" data-zoom-src="images/1000000000000571000003E4D5790870.png" /></td></tr></table>
@@ -1177,7 +1177,7 @@
 </ul>
 
 <p>The associated data list is the array {&quot;zero&quot;, &quot;one&quot;, &quot;two&quot;, &quot;three&quot;}. Each of these data points is associated with a group of two buttons labeled [Infos1] and [Infos2]. The user clicks one of the buttons, and text displays the name of the clicked button. The goal here is to demonstrate how to manage a list of buttons or links.</p>
-<p><a id="toc73957261"></a></p>
+<p><span id="toc73957261" name="toc73957261" class="odt-bookmark-anchor"></span></p>
 <h3 id="922-component-configuration">9.2.2. Component Configuration</h3>
 <p>The [DataList1] component is configured as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1255,7 +1255,7 @@
 </code></pre></div>
 
 <p>Here as well, we have omitted styling information (colors, widths, etc.). We are in automatic column generation mode, which is the default mode for [DataGrid]. This means there will be as many columns as there are in the data source. Here, there is one. We have added two other columns tagged with &lt;asp:ButtonColumn&gt;. In them, we define information similar to that defined for the other two components, as well as the button type, here [PushButton]. The default type is [LinkButton], c.a.d. a link. Additionally, the data will be paginated [AllowPaging=true] with a page size of two items [PageSize=2].</p>
-<p><a id="toc73957262"></a></p>
+<p><span id="toc73957262" name="toc73957262" class="odt-bookmark-anchor"></span></p>
 <h3 id="923-the-page-layout-code">9.2.3. The page layout code</h3>
 <p>The presentation code for our example page has been placed in a file named [main.aspx]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1343,7 +1343,7 @@
 </code></pre></div>
 
 <p>In the code above, we have omitted the formatting code (colors, lines, sizes, etc.)</p>
-<p><a id="toc73957263"></a></p>
+<p><span id="toc73957263" name="toc73957263" class="odt-bookmark-anchor"></span></p>
 <h3 id="924-the-page-control-code">9.2.4. The page control code</h3>
 <p>The application control code has been placed in the file [main.aspx.vb]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Public</span><span class="w"> </span><span class="n">Class</span><span class="w"> </span><span class="n">main</span>
@@ -1415,10 +1415,10 @@
   </li>
 </ul>
 
-<p><a id="toc73957264"></a></p>
+<p><span id="toc73957264" name="toc73957264" class="odt-bookmark-anchor"></span></p>
 <h2 id="93-application-managing-a-subscription-list">9.3. Application - Managing a Subscription List</h2>
 <p>Now that we know how to intercept events that occur within a data container, we present an example showing how they can be managed.</p>
-<p><a id="toc73957265"></a></p>
+<p><span id="toc73957265" name="toc73957265" class="odt-bookmark-anchor"></span></p>
 <h3 id="931-introduction">9.3.1. Introduction</h3>
 <p>The application presented simulates a mailing list subscription application. These are defined by a three-column [DataTable] object:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>name</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>type</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>role</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
@@ -1481,7 +1481,7 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Label</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;" colspan="2"><div style="margin:0 0 0.5em 0">Application information message</div></td></tr></table>
 
 <p>Our example aims to illustrate the use of the [DataGrid] and [DataList] components, particularly the handling of events that occur at the row level of these data containers. Therefore, the application does not have a submit button that would save, for example, the user’s selections to a database. Nevertheless, it is realistic. We are close to an e-commerce application where a user would add products (subscriptions) to their cart.</p>
-<p><a id="toc73957266"></a></p>
+<p><span id="toc73957266" name="toc73957266" class="odt-bookmark-anchor"></span></p>
 <h3 id="932-functionality">9.3.2. Functionality</h3>
 <p>The first view the user sees is as follows:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003A0000002AA9C436759.png" width="464" height="341" style="display:inline-block; margin:4px;width:12.277cm;height:9.022cm;" class="odt-zoomable" data-zoom-src="images/10000000000003A0000002AA9C436759.png" /></td></tr></table>
@@ -1494,7 +1494,7 @@
 <p><img src="images/100000000000018F00000145FE261821.png" width="399" height="325" style="width:10.557cm;height:8.599cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018F00000145FE261821.png" /></p>
 <p>Finally, they can unsubscribe from one of the themes using the [Retirer] buttons above. No confirmation is required. This is not necessary here because the user can easily resubscribe. Here is the view after unsubscribing from [thème1]:</p>
 <p><img src="images/100000000000018A00000120953099A3.png" width="394" height="288" style="width:10.425cm;height:7.62cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018A00000120953099A3.png" /></p>
-<p><a id="toc73957267"></a></p>
+<p><span id="toc73957267" name="toc73957267" class="odt-bookmark-anchor"></span></p>
 <h3 id="933-configuring-data-containers">9.3.3. Configuring data containers</h3>
 <p>The [dgThèmes] component of type [DataGrid] is linked to a source of type [DataTable]. Its formatting was configured using the [Mise en forme automatique] link in the [DataGrid] properties panel. Its properties were defined using the [Générateur de proprités] link in the same panel. The generated code is as follows (the formatting code is omitted):</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1558,7 +1558,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">defines the current item of [DataList] - here we have placed a table with two columns and one row. The first cell will contain the name of the theme the user wants to subscribe to, the other the [Retirer] button that allows them to cancel their selection.</div></td></tr></table>
 
-<p><a id="toc73957268"></a></p>
+<p><span id="toc73957268" name="toc73957268" class="odt-bookmark-anchor"></span></p>
 <h3 id="934-the-display-page">9.3.4. The display page</h3>
 <p>The presentation code [main.aspx] is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1606,7 +1606,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><a id="toc73957269"></a></p>
+<p><span id="toc73957269" name="toc73957269" class="odt-bookmark-anchor"></span></p>
 <h3 id="935-the-controllers">9.3.5. The controllers</h3>
 <p>Control is distributed between the files [global.asax] and [main.aspx]. The file [global.asax] is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>&lt;%@ Application src=&quot;global.asax.vb&quot; inherits=&quot;global&quot; %&gt;
@@ -1866,10 +1866,10 @@
 </code></pre></div>
 
 <p>First, we check the [CommandName] attribute of the element that triggered the event. This is actually quite unnecessary since the [Retirer] button is the only control capable of generating an event in the [DataList] component. There is therefore no ambiguity. To delete a row from a [DataTable] object, we use the [DataList.Remove(DataRow)] method, which removes the row of type [DataRow] passed as a parameter from the table. This row is found by the [DataList.Find] method, to which the primary key of the row being searched for has been passed. Once the row has been deleted, the data is linked to the components </p>
-<p><a id="toc73957270"></a></p>
+<p><span id="toc73957270" name="toc73957270" class="odt-bookmark-anchor"></span></p>
 <h2 id="94-managing-a-paginated-datalist">9.4. Managing a paginated [DataList]</h2>
 <p>We’ll revisit the previous example to paginate the [DataList] component representing the user’s subscription list. Unlike the [DataGrid] component, the [DataList] component offers no built-in pagination functionality. We will see that implementing pagination is complex, which will help us appreciate the true value of the automatic pagination in [DataGrid].</p>
-<p><a id="toc73957271"></a></p>
+<p><span id="toc73957271" name="toc73957271" class="odt-bookmark-anchor"></span></p>
 <h3 id="941-functionality">9.4.1. Functionality</h3>
 <p>The only difference is the pagination in [DataList]. The pages will display two subscriptions. If the user has five subscriptions, there will be three pages. The first will look like this:</p>
 <p><img src="images/1000000000000189000000FF645F0AE0.png" width="393" height="256" style="width:10.398cm;height:6.761cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000189000000FF645F0AE0.png" /></p>
@@ -1878,7 +1878,7 @@
 <p>The third page:</p>
 <p><img src="images/1000000000000190000000FBA868B568.png" width="400" height="252" style="width:10.583cm;height:6.655cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000190000000FBA868B568.png" /></p>
 <p>Note that the links [Précédent] and [Suivant] are only visible if there is a preceding page and a following page, respectively, for the current page. </p>
-<p><a id="toc73957272"></a></p>
+<p><span id="toc73957272" name="toc73957272" class="odt-bookmark-anchor"></span></p>
 <h3 id="942-presentation-code">9.4.2. Presentation code</h3>
 <p>The links [Précédent] and [Suivant] are generated by adding a &lt;FooterTemplate&gt; tag to [DataList]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1892,7 +1892,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">                        &lt;/<span style="color:#800000">asp:datalist</span>&gt;</span></span>
 </code></pre></div>
 
-<p><a id="toc73957273"></a></p>
+<p><span id="toc73957273" name="toc73957273" class="odt-bookmark-anchor"></span></p>
 <h3 id="943-control-code">9.4.3. Control code</h3>
 <p>The associated file [global.asax.vb] changes as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">...</span>
@@ -2184,16 +2184,16 @@
 </ul>
 
 <p>The other procedures remain the same as before.</p>
-<p><a id="toc73957274"></a></p>
+<p><span id="toc73957274" name="toc73957274" class="odt-bookmark-anchor"></span></p>
 <h3 id="944-conclusion">9.4.4. Conclusion</h3>
 <p>We have demonstrated in this example that we can paginate a [DataList] component. This pagination is complex, and it is preferable to rely on the automatic pagination of the [DataGrid] component whenever possible. This example also showed us how to access the components in the footer of the [DataList] component.</p>
-<p><a id="toc73957275"></a></p>
+<p><span id="toc73957275" name="toc73957275" class="odt-bookmark-anchor"></span></p>
 <h2 id="95-product-database-access-class">9.5. Product Database Access Class</h2>
 <p>We are once again looking at the ACCESS [produits] database already used. Recall that it has a single table named [liste] with the following structure:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000129000000520AA764BD.png" width="297" height="82" style="display:inline-block; margin:4px;width:7.858cm;height:2.17cm;" class="odt-zoomable" data-zoom-src="images/1000000000000129000000520AA764BD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000012F00000048239E9279.png" width="303" height="72" style="display:inline-block; margin:4px;width:8.017cm;height:1.905cm;" class="odt-zoomable" data-zoom-src="images/100000000000012F00000048239E9279.png" /></td></tr></table>
 
 <p>We will build an access class for the [liste] table that will allow us to read and update it. We will also build a console client that will use the previous class to update the table. Next, we will build a web client to perform the same task.</p>
-<p><a id="toc73957276"></a></p>
+<p><span id="toc73957276" name="toc73957276" class="odt-bookmark-anchor"></span></p>
 <h3 id="951-the-exceptionproduits-class">9.5.1. The ExceptionProduits class</h3>
 <p>The [Exception] class has a constructor that accepts an error message as a parameter. Here, we want an exception class with a constructor that accepts a list of error messages rather than a single error message. This will be the [ExceptionProduits] class below:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2217,7 +2217,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p><a id="toc73957277"></a></p>
+<p><span id="toc73957277" name="toc73957277" class="odt-bookmark-anchor"></span></p>
 <h3 id="952-the-structure-sproduit">9.5.2. The structure [sProduit]</h3>
 <p>The [produit] structure will represent a [id, nom, prix] product:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2263,7 +2263,7 @@
 </code></pre></div>
 
 <p>The structure only accepts valid data for fields [nom] and [prix].</p>
-<p><a id="toc73957278"></a></p>
+<p><span id="toc73957278" name="toc73957278" class="odt-bookmark-anchor"></span></p>
 <h3 id="953-the-products-class">9.5.3. The Products Class</h3>
 <p>The [Produits] class is the class that will allow us to update the [liste] table in the product database. Its structure is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>    Public Class produits
@@ -2489,7 +2489,7 @@
 </code></pre></div>
 
 <p>The approach is the same as for the previous methods.</p>
-<p><a id="toc73957279"></a></p>
+<p><span id="toc73957279" name="toc73957279" class="odt-bookmark-anchor"></span></p>
 <h3 id="954-testing-the-produits-class">9.5.4. Testing the [produits] class</h3>
 <p>A console-based test program [testproduits.vb] could look like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="k">Option</span><span class="w"> </span><span class="k">Explicit</span><span class="w"> </span><span class="n">On</span><span class="w"> </span>
@@ -2630,9 +2630,9 @@
 <a id="__codelineno-51-22" name="__codelineno-51-22" href="#__codelineno-51-22"></a>...
 </code></pre></div>
 <p>Readers are invited to compare the screen output above with the test program code.</p>
-<p><a id="toc73957280"></a></p>
+<p><span id="toc73957280" name="toc73957280" class="odt-bookmark-anchor"></span></p>
 <h2 id="96-web-application-for-updating-the-cached-product-table">9.6. Web application for updating the cached product table</h2>
-<p><a id="toc73957281"></a></p>
+<p><span id="toc73957281" name="toc73957281" class="odt-bookmark-anchor"></span></p>
 <h3 id="961-introduction">9.6.1. Introduction</h3>
 <p>We are now writing a web application to update the product table (add, delete, modify). The updated table will remain in memory in a [DataTable] object and will be shared by all users. We want to highlight two points:</p>
 <ul>
@@ -2645,7 +2645,7 @@
 <p>The MVC architecture of the application will be as follows:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005AD000002793DEB0444.png" width="680" height="296" style="display:inline-block; margin:4px;width:17.999cm;height:7.84cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AD000002793DEB0444.png" /></td></tr></table>
 
-<p><a id="toc73957282"></a></p>
+<p><span id="toc73957282" name="toc73957282" class="odt-bookmark-anchor"></span></p>
 <h3 id="962-functionality-and-views">9.6.2. Functionality and Views</h3>
 <p>The application’s home view is as follows:</p>
 <p><img src="images/10000000000004440000020FAA4BC2D3.png" width="546" height="264" style="width:14.446cm;height:6.973cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004440000020FAA4BC2D3.png" /></p>
@@ -2893,7 +2893,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Repeater</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">list of errors</div></td></tr></table>
 
-<p><a id="toc73957283"></a></p>
+<p><span id="toc73957283" name="toc73957283" class="odt-bookmark-anchor"></span></p>
 <h3 id="963-data-container-configuration">9.6.3. Data container configuration</h3>
 <p>The five [DataGrid] containers have been configured under [WebMatrix]. They have been formatted (colors and borders) using the [Configuration automatique] link in their properties panel. The [DataGrid1] container was configured using the [Générateur de propriétés] link in the same panel. Sorting has been enabled ([Général] tab):</p>
 <p><img src="images/10000000000000B5000000809EFA7426.png" width="181" height="128" style="width:4.789cm;height:3.387cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000B5000000809EFA7426.png" /></p>
@@ -2945,7 +2945,7 @@
 </code></pre></div>
 
 <p>Each row of the component displays the value [Container.DataItem], c.a.d. The corresponding value from the data list. This will be of type [ArrayList] and will represent a list of errors.</p>
-<p><a id="toc73957284"></a></p>
+<p><span id="toc73957284" name="toc73957284" class="odt-bookmark-anchor"></span></p>
 <h3 id="964-the-applications-presentation-code">9.6.4. The application&#x27;s presentation code</h3>
 <p>This is located in the file [main.aspx]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3160,7 +3160,7 @@
   </li>
 </ul>
 
-<p><a id="toc73957285"></a></p>
+<p><span id="toc73957285" name="toc73957285" class="odt-bookmark-anchor"></span></p>
 <h3 id="965-the-control-code-globalasax">9.6.5. The control code [global.asax]</h3>
 <p>The [global.asax] controller is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-113-1" name="__codelineno-113-1" href="#__codelineno-113-1"></a>&lt;%@ Application src=&quot;global.asax.vb&quot; inherits=&quot;Global&quot; %&gt;
@@ -3266,7 +3266,7 @@
   </li>
 </ul>
 
-<p><a id="toc73957286"></a></p>
+<p><span id="toc73957286" name="toc73957286" class="odt-bookmark-anchor"></span></p>
 <h3 id="966-the-mainaspxvb-controller-code">9.6.6. The [main.aspx.vb] controller code</h3>
 <p>The controller skeleton is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -3394,7 +3394,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p><a id="toc73957287"></a></p>
+<p><span id="toc73957287" name="toc73957287" class="odt-bookmark-anchor"></span></p>
 <h3 id="967-instance-data">9.6.7. Instance data</h3>
 <p>The [main] class uses the following instance data:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1" href="#__codelineno-114-1"></a><span class="n">Public</span><span class="w"> </span><span class="n">Class</span><span class="w"> </span><span class="n">main</span>
@@ -3420,7 +3420,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"> default number of products per page</div></td></tr></table>
 
-<p><a id="toc73957288"></a></p>
+<p><span id="toc73957288" name="toc73957288" class="odt-bookmark-anchor"></span></p>
 <h3 id="968-the-page_load-procedure-for-loading-the-page">9.6.8. The [Page_Load] procedure for loading the page</h3>
 <p>The code for the [page_Load] procedure is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -3474,7 +3474,7 @@
 </ol>
 
 <p>We can see that by setting [EditItemIndex] to -1 when the page loads, we avoid having to worry about whether or not the user was in update mode when they clicked a link.</p>
-<p><a id="toc73957289"></a></p>
+<p><span id="toc73957289" name="toc73957289" class="odt-bookmark-anchor"></span></p>
 <h3 id="969-displaying-views-erreurs-formulaire-and-ajout">9.6.9. Displaying views [erreurs], [formulaire], and [ajout]</h3>
 <p>The [erreurs] view is displayed when the [Page_Load] page loads if it is detected that the application failed to initialize properly. This display is achieved by associating the [rptErreurs] data component with the error list passed as a parameter and making the appropriate container visible. Finally, the three [Filtre, Mise à jour, Ajout] links are hidden because the application cannot be used in the event of an error.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
@@ -3548,7 +3548,7 @@
 </code></pre></div>
 
 <p><img src="images/10000000000001CB0000009BAB7D0D89.png" width="459" height="155" style="width:12.144cm;height:4.101cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CB0000009BAB7D0D89.png" /></p>
-<p><a id="toc73957290"></a></p>
+<p><span id="toc73957290" name="toc73957290" class="odt-bookmark-anchor"></span></p>
 <h3 id="9610-validation-of-view-formulaire">9.6.10. Validation of view [formulaire]</h3>
 <p>Clicking the [Exécuter] button above is handled by the following procedure:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -3603,7 +3603,7 @@
 </ul>
 
 <p>These two pieces of information are used every time the view [produits] is displayed.</p>
-<p><a id="toc73957291"></a></p>
+<p><span id="toc73957291" name="toc73957291" class="odt-bookmark-anchor"></span></p>
 <h3 id="9611-displaying-view-produits">9.6.11. Displaying view [produits]</h3>
 <p>The view [produits] is as follows:</p>
 <p><img src="images/10000000000002880000011E0164CB06.png" width="648" height="286" style="width:17.145cm;height:7.567cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002880000011E0164CB06.png" /></p>
@@ -3805,7 +3805,7 @@
 </code></pre></div>
 
 <p>The view [produits] must be displayed. This is done using the [afficheProduits] procedure, which accepts two parameters: the number of the current page to display and the number of products per page to display. Both of these pieces of information are in the session, possibly with their default values if the user has never defined them themselves.</p>
-<p><a id="toc73957292"></a></p>
+<p><span id="toc73957292" name="toc73957292" class="odt-bookmark-anchor"></span></p>
 <h3 id="9612-pagination-and-sorting-in-datagrid1">9.6.12. Pagination and Sorting in [DataGrid1]</h3>
 <p>We have already encountered the procedures that handle pagination and sorting for [DataGrid] in another example. When the page changes, the [produits] view is displayed by passing the new page number as a parameter to the [afficheProduits] procedure.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -3831,7 +3831,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">End</span> <span style="color:#0000ff">Sub</span></span></span>
 </code></pre></div>
 
-<p><a id="toc73957293"></a></p>
+<p><span id="toc73957293" name="toc73957293" class="odt-bookmark-anchor"></span></p>
 <h3 id="9613-deleting-a-product">9.6.13. Deleting a product</h3>
 <p>To delete a product, the user clicks the [Supprimer] link in the product row:</p>
 <p><img src="images/10000000000000EB000000B9CFCFBE15.png" width="235" height="185" style="width:6.218cm;height:4.895cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EB000000B9CFCFBE15.png" /></p>
@@ -3966,7 +3966,7 @@
 <p>The response received is as follows:</p>
 <p><img src="images/10000000000002B30000019FEE15C944.png" width="680" height="409" style="width:17.992cm;height:10.809cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B30000019FEE15C944.png" /></p>
 <p>An error message informs the user that the product with key [2] does not exist. The response returns a new view to the client reflecting the current state of the table. We can see that the product with key [2] is indeed in the list of deleted products. The view [produits] therefore reflects the updates to all clients products, not just one.</p>
-<p><a id="toc73957294"></a></p>
+<p><span id="toc73957294" name="toc73957294" class="odt-bookmark-anchor"></span></p>
 <h3 id="9614-adding-a-product">9.6.14. Adding a product</h3>
 <p>To add a product, the user uses the [Ajout] link in the options. This simply displays the [Ajout] view:</p>
 <p><img src="images/10000000000001260000003F26B2813E.png" width="294" height="63" style="width:7.779cm;height:1.667cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001260000003F26B2813E.png" /></p>
@@ -4056,7 +4056,7 @@
 <a id="__codelineno-139-9" name="__codelineno-139-9" href="#__codelineno-139-9"></a><span class="w">        </span><span class="n">End</span><span class="w"> </span><span class="n">Try</span>
 </code></pre></div>
 <p>Normally, no exceptions are possible. However, exception handling has been implemented as a precaution. Once the addition is made, we exit the critical section via [Application.Unlock].</p>
-<p><a id="toc73957295"></a></p>
+<p><span id="toc73957295" name="toc73957295" class="odt-bookmark-anchor"></span></p>
 <h3 id="9615-modifying-a-product">9.6.15. Modifying a product</h3>
 <p>To modify a product, the user clicks the [Modifier] link in the product row:</p>
 <p><img src="images/10000000000000E60000007AC133200C.png" width="230" height="122" style="width:6.085cm;height:3.228cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E60000007AC133200C.png" /></p>
@@ -4231,9 +4231,9 @@
 <p>Client [Mozilla] receives the following response to its update:</p>
 <p><img src="images/10000000000002A3000001A0CA7A0FC1.png" width="675" height="416" style="width:17.859cm;height:11.007cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002A3000001A0CA7A0FC1.png" /></p>
 <p>It can see that [produit1] has been deleted since it is in the list of deleted products.</p>
-<p><a id="toc73957296"></a></p>
+<p><span id="toc73957296" name="toc73957296" class="odt-bookmark-anchor"></span></p>
 <h2 id="97-web-application-for-updating-the-physical-product-table">9.7. Web application for updating the physical product table</h2>
-<p><a id="toc73957297"></a></p>
+<p><span id="toc73957297" name="toc73957297" class="odt-bookmark-anchor"></span></p>
 <h3 id="971-proposed-solutions">9.7.1. Proposed solutions</h3>
 <p>The previous application was more of a textbook example intended to demonstrate the management of a cached [DataTable] object than a common scenario. Indeed, at some point, the actual data source must be updated. Two different strategies can be chosen:</p>
 <ol>
@@ -4244,7 +4244,7 @@
 </ol>
 
 <p>Strategy #1 allows opening only one connection to the physical data source. Strategy #2 requires a connection for each update. Depending on connection availability, one strategy may be preferred over the other. Since we have the tools to implement it (the [produits] class), we choose strategy #2.</p>
-<p><a id="toc73957298"></a></p>
+<p><span id="toc73957298" name="toc73957298" class="odt-bookmark-anchor"></span></p>
 <h3 id="972-sion-1">9.7.2. sion 1</h3>
 <p>For the sake of continuity with the previous application, we choose the following strategy:</p>
 <ul>
@@ -4404,7 +4404,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">End</span> <span style="color:#0000ff">Sub</span></span></span>
 </code></pre></div>
 
-<p><a id="toc73957299"></a></p>
+<p><span id="toc73957299" name="toc73957299" class="odt-bookmark-anchor"></span></p>
 <h3 id="973-tests">9.7.3. Tests</h3>
 <p>We start with the following data table in a ACCESS file:</p>
 <p><img src="images/1000000000000087000000BA44BC14AB.png" width="135" height="186" style="width:3.572cm;height:4.921cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000087000000BA44BC14AB.png" /></p>
@@ -4425,7 +4425,7 @@
 <p>They receive the following response:</p>
 <p><img src="images/10000000000003A700000129C50FDB3E.png" width="680" height="216" style="width:17.979cm;height:5.703cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003A700000129C50FDB3E.png" /></p>
 <p>The line [produit2] has indeed been removed from the cache, as shown in the list of deleted products. However, the deletion of [produit2] in the physical source failed, as indicated by the error message.</p>
-<p><a id="toc73957300"></a></p>
+<p><span id="toc73957300" name="toc73957300" class="odt-bookmark-anchor"></span></p>
 <h3 id="974-solution-2">9.7.4. Solution 2</h3>
 <p>In the previous solution, the clients web applications simultaneously update the physical data source, but they do not see the changes made by the other clients applications. They only see their own. We now want a client to be able to see the physical data source as it currently is, not as it was when the application was launched. To do this, we will provide the client with a new option:</p>
 <p><img src="images/10000000000001630000003A0E0DC74D.png" width="355" height="58" style="width:9.393cm;height:1.535cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001630000003A0E0DC74D.png" /></p>
@@ -4584,7 +4584,7 @@
 <p>He is notified that [produit1] no longer exists. The user then decides to refresh his cache using the [Rafraîchir] link above. He receives the following response:</p>
 <p><img src="images/10000000000001780000018D9F513E1E.png" width="377" height="398" style="width:9.962cm;height:10.518cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001780000018D9F513E1E.png" /></p>
 <p>He now has the same data source as the client [Mozilla].</p>
-<p><a id="toc73957301"></a></p>
+<p><span id="toc73957301" name="toc73957301" class="odt-bookmark-anchor"></span></p>
 <h2 id="98-conclusion">9.8. Conclusion</h2>
 <p>In this chapter, we spent some time on data containers and their links to data sources. We concluded by showing how to update a data source using a [DataGrid] component. We used a database table as our data source. Although the [DataGrid] component makes data presentation a bit easier, the real challenge lies not in the presentation itself but in managing updates to the data source made by the various clients components. Access conflicts can arise and must be managed. Here, we handled them in the controller using [Application.Lock]. It would likely be wiser to synchronize access to the data source within the data access class so that the controller does not have to concern itself with such details that are outside its scope.</p>
 <p>In practice, tables in a database are linked to one another by relationships, and their updates must take these into account. This has consequences first and foremost for the data access class, which becomes more complex than what is required for an independent table. It also generally has consequences for the presentation layer of the web application, as it is often necessary to display not a single table but tables linked to one another by relationships.</p>

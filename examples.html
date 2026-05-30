@@ -1113,15 +1113,15 @@
 
 
 
-<p><a id="toc68590499"></a>
-<a id="toc68683093"></a></p>
+<p><span id="toc68590499" name="toc68590499" class="odt-bookmark-anchor"></span>
+<span id="toc68683093" name="toc68683093" class="odt-bookmark-anchor"></span></p>
 <h1 id="6-examples">6. Examples</h1>
 <p>In this chapter, we aim to illustrate what we have seen previously through a series of examples.</p>
-<p><a id="toc68590500"></a>
-<a id="toc68683094"></a></p>
+<p><span id="toc68590500" name="toc68590500" class="odt-bookmark-anchor"></span>
+<span id="toc68683094" name="toc68683094" class="odt-bookmark-anchor"></span></p>
 <h2 id="61-example-1">6.1. Example 1</h2>
-<p><a id="toc68590501"></a>
-<a id="toc68683095"></a></p>
+<p><span id="toc68590501" name="toc68590501" class="odt-bookmark-anchor"></span>
+<span id="toc68683095" name="toc68683095" class="odt-bookmark-anchor"></span></p>
 <h3 id="611-the-problem">6.1.1. The Problem</h3>
 <p>This application must allow a user to calculate their taxes. We consider the simplified case of a taxpayer who has only their salary to report (2004 figures for 2003 income):</p>
 <ul>
@@ -1146,8 +1146,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    0                0.4809    9505.54
 </code></pre></div>
 <p>which gives the tax I=0.4809*R - 9505.54*nbParts.</p>
-<p><a id="toc68590502"></a>
-<a id="toc68683096"></a></p>
+<p><span id="toc68590502" name="toc68590502" class="odt-bookmark-anchor"></span>
+<span id="toc68683096" name="toc68683096" class="odt-bookmark-anchor"></span></p>
 <h3 id="612-the-mvc-structure-of-the-application">6.1.2. The MVC structure of the application</h3>
 <p>The structure MVC of the application will be as follows:</p>
 <p><img src="images/10000000000005AB00000258B0036703.png" width="680" height="281" style="width:17.999cm;height:7.444cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AB00000258B0036703.png" /></p>
@@ -1162,8 +1162,8 @@
 </ul>
 
 <p>The [main.aspx] controller does not handle tax calculations. It is simply responsible for managing the client-server dialogue and executing the actions requested by the client. For the action [calcul], it will rely on the business class [impot].</p>
-<p><a id="toc68590503"></a>
-<a id="toc68683097"></a></p>
+<p><span id="toc68590503" name="toc68590503" class="odt-bookmark-anchor"></span>
+<span id="toc68683097" name="toc68683097" class="odt-bookmark-anchor"></span></p>
 <h3 id="613-the-business-class">6.1.3. The business class</h3>
 <p>The <strong>tax</strong> class will be defined as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -1214,8 +1214,8 @@
 </code></pre></div>
 
 <p>A <strong>tax</strong> object by providing its constructor with a data source of type [impotsData]. This class has a public method [getData] that retrieves the three data arrays required to calculate the tax, as described earlier. This method can handle an exception if the data could not be retrieved or if it turns out to be incorrect. Once the [impot] object is created, its <code>**calculate</code>** method can be called repeatedly to calculate the taxpayer’s tax based on their marital status (married or not), number of children, and annual salary.</p>
-<p><a id="toc68590504"></a>
-<a id="toc68683098"></a></p>
+<p><span id="toc68590504" name="toc68590504" class="odt-bookmark-anchor"></span>
+<span id="toc68683098" name="toc68683098" class="odt-bookmark-anchor"></span></p>
 <h3 id="614-the-data-access-class">6.1.4. The data access class</h3>
 <p>The [impotsData] class is the class that provides access to the data. It is an abstract class. A derived class must be created for each new possible data source (tables, flat files, databases, console, etc.). Its definition is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1342,8 +1342,8 @@
 </ul>
 
 <p>The method [getData], which allows external classes to retrieve the arrays (limits, coeffr, coeffn), simply verifies the validity of the three arrays using the method [checkData] of the base class. It throws an exception if the data is invalid.</p>
-<p><a id="toc68590505"></a>
-<a id="toc68683099"></a></p>
+<p><span id="toc68590505" name="toc68590505" class="odt-bookmark-anchor"></span>
+<span id="toc68683099" name="toc68683099" class="odt-bookmark-anchor"></span></p>
 <h3 id="615-testing-business-classes-and-data-access-classes">6.1.5. Testing business classes and data access classes</h3>
 <p>It is important to include only business and data access classes that have been verified as correct in a web application. This way, the web application debugging phase can focus on the controller and view components. A test program might look like the following:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
@@ -1491,8 +1491,8 @@
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>impôt=6872 euro(s)
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>Paramètres du calcul de l&#39;tax in married format nbEnfants salary or nothing to stop :
 </code></pre></div>
-<p><a id="toc68590506"></a>
-<a id="toc68683100"></a></p>
+<p><span id="toc68590506" name="toc68590506" class="odt-bookmark-anchor"></span>
+<span id="toc68683100" name="toc68683100" class="odt-bookmark-anchor"></span></p>
 <h3 id="616-web-application-views">6.1.6. Web application views</h3>
 <p>The application will have two views: [formulaire.aspx] and [erreurs.aspx]. Let’s illustrate how the application works using screenshots. The [formulaire.aspx] view is displayed when url [main.aspx] is requested for the first time:</p>
 <p><img src="images/1000000000000100000000FEAFB8A86F.png" width="256" height="254" style="width:6.773cm;height:6.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000100000000FEAFB8A86F.png" /></p>
@@ -1506,8 +1506,8 @@
 <p><img src="images/1000000000000100000000912AC3FAD4.png" width="256" height="145" style="width:6.773cm;height:3.836cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000100000000912AC3FAD4.png" /></p>
 <p>They can use the [Retour au formulaire] link above to retrieve the [formulaire.aspx] view as it was validated before the error:</p>
 <p><img src="images/10000000000001010000008BD04534B1.png" width="257" height="139" style="width:6.8cm;height:3.678cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001010000008BD04534B1.png" /></p>
-<p><a id="toc68590507"></a>
-<a id="toc68683101"></a></p>
+<p><span id="toc68590507" name="toc68590507" class="odt-bookmark-anchor"></span>
+<span id="toc68683101" name="toc68683101" class="odt-bookmark-anchor"></span></p>
 <h3 id="617-the-view-formulaireaspx">6.1.7. The view [formulaire.aspx]</h3>
 <p>The page [formulaire.aspx] will be as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1631,8 +1631,8 @@
   </li>
 </ul>
 
-<p><a id="toc68590508"></a>
-<a id="toc68683102"></a></p>
+<p><span id="toc68590508" name="toc68590508" class="odt-bookmark-anchor"></span>
+<span id="toc68683102" name="toc68683102" class="odt-bookmark-anchor"></span></p>
 <h3 id="618-the-erreursaspx-view">6.1.8. The [erreurs.aspx] view</h3>
 <p>The [erreurs.aspx] view displays any errors that may occur during the application&#x27;s runtime. Its presentation code is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1707,8 +1707,8 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">link text</div></td></tr></table>
 
 <p>Now that we know what the application user sees, we can move on to writing the application&#x27;s controller.</p>
-<p><a id="toc68590509"></a>
-<a id="toc68683103"></a></p>
+<p><span id="toc68590509" name="toc68590509" class="odt-bookmark-anchor"></span>
+<span id="toc68683103" name="toc68683103" class="odt-bookmark-anchor"></span></p>
 <h3 id="619-the-controllers-globalasax-mainaspx">6.1.9. The controllers [global.asax, main.aspx]</h3>
 <p>Let’s review the diagram of our application:</p>
 <p><img src="images/10000000000005BE0000027993D6CC27.png" width="680" height="293" style="width:17.999cm;height:7.751cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BE0000027993D6CC27.png" /></p>
@@ -1997,8 +1997,8 @@
   </li>
 </ul>
 
-<p><a id="toc68683104"></a>
-<a id="toc68590510"></a></p>
+<p><span id="toc68683104" name="toc68683104" class="odt-bookmark-anchor"></span>
+<span id="toc68590510" name="toc68590510" class="odt-bookmark-anchor"></span></p>
 <h3 id="6110-testing-the-web-application">6.1.10. Testing the web application</h3>
 <p>All of the above files are placed in a folder named &lt;application-path&gt;. </p>
 <p><img src="images/10000000000000870000008A85ED472C.png" width="135" height="138" style="width:3.572cm;height:3.651cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000870000008A85ED472C.png" /></p>
@@ -2026,7 +2026,7 @@
 <p><img src="images/100000000000022800000144D8AFFFE5.png" width="552" height="324" style="width:14.605cm;height:8.573cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022800000144D8AFFFE5.png" /></p>
 <p>Finally, clicking the [Effacer] button resets the page:</p>
 <p><img src="images/100000000000022700000141046A326B.png" width="551" height="321" style="width:14.579cm;height:8.493cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022700000141046A326B.png" /></p>
-<p><a id="toc68683105"></a></p>
+<p><span id="toc68683105" name="toc68683105" class="odt-bookmark-anchor"></span></p>
 <h3 id="6111-using-the-curl-client">6.1.11. Using the [curl] client</h3>
 <p>It is important to test web applications with clients other than browsers. If a form is sent to a browser with parameters to be posted upon validation, the browser will send the values of these parameters back to the server. Another client might not do this, and the server would then receive a request with missing parameters. It must know how to handle this situation. Another example is client-side data validation. If the form contains data to be validated, this validation can be performed on the client side using scripts included in the document containing the form. The browser will only submit the form if all client-side validated data is valid. One might then be tempted, on the server side, to assume that we will receive validated data and not want to perform this validation a second time. That would be a mistake. Indeed, a client other than a browser could send invalid data to the server, and the web application might then behave unexpectedly. We will illustrate these points using the client [curl].</p>
 <p>First, we request url from [http://localhost/impots1/main.aspx]:</p>
@@ -2203,12 +2203,12 @@
 <p>A web application can be built to simultaneously serve different clients clients, such as browsers and mobile phones. A new parameter indicating the client type can then be included in each request. Thus, a browser will request tax calculation via a request to the url <mark style="background-color: #ffe994">http://machine/impots/main.aspx?client=browser&amp;action=calcul</mark>, while a mobile phone will send a request to url <mark style="background-color: #ffe994">http://machine/impots/main.aspx?client=mobile&amp;action=calcul</mark>. The MVC structure makes it easier to write such an application. It becomes as follows:</p>
 <p><img src="images/10000000000005B60000023E855A62E6.png" width="680" height="267" style="width:17.999cm;height:7.066cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005B60000023E855A62E6.png" /></p>
 <p>The [Classes métier, Classes d&#x27;accès aux données] block remains unchanged. This is because it is a client-agnostic component. The [Contrôleur] block changes slightly but must account for a new parameter in the request: the [client] parameter, which indicates the type of client it is dealing with. The [vues] block must generate views for each client type. It might be worthwhile to account for the presence of the [client] parameter in the request from the very beginning of the application’s design, even if the short- or medium-term goal is limited to browsers alone. If the application needs to support a new client type in the future, only views tailored to that type need to be written.</p>
-<p><a id="toc68683106"></a></p>
+<p><span id="toc68683106" name="toc68683106" class="odt-bookmark-anchor"></span></p>
 <h2 id="62-example-2">6.2. Example 2</h2>
-<p><a id="toc68683107"></a></p>
+<p><span id="toc68683107" name="toc68683107" class="odt-bookmark-anchor"></span></p>
 <h3 id="621-the-problem">6.2.1. The Problem</h3>
 <p>Here, we aim to address the same issue as before, but by modifying the data source for the [impot] object created by the web application. In the previous version, the data source provided array values hard-coded in the code. This time, the new data source will retrieve them from a ODBC data source associated with a MySQL database.</p>
-<p><a id="toc68683108"></a></p>
+<p><span id="toc68683108" name="toc68683108" class="odt-bookmark-anchor"></span></p>
 <h3 id="622-the-odbc-data-source">6.2.2. The ODBC data source</h3>
 <p>The data will be located in a table named [IMPOTS] within a database named MySQL. The contents of this table will be as follows:</p>
 <p><img src="images/10000000000000A8000000F29BBCE751.png" width="168" height="242" style="width:4.445cm;height:6.403cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000A8000000F29BBCE751.png" /></p>
@@ -2292,7 +2292,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">The full name of the ACCESS file to be used</div></td></tr></table>
 
-<p><a id="toc68683109"></a></p>
+<p><span id="toc68683109" name="toc68683109" class="odt-bookmark-anchor"></span></p>
 <h3 id="623-a-new-data-access-class">6.2.3. A new data access class</h3>
 <p>Let’s return to the MVC structure in our application:</p>
 <p><img src="images/10000000000005C100000265922CAC84.png" width="680" height="283" style="width:17.999cm;height:7.489cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C100000265922CAC84.png" /></p>
@@ -2525,7 +2525,7 @@
 <a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="w">            </span><span class="c1">&#39; otherwise we return the three tables</span>
 <a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="w">            </span><span class="n">Return</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">Object</span><span class="p">()</span><span class="w"> </span><span class="err">{limites, coeffr, coeffn}</span>
 </code></pre></div>
-<p><a id="toc68683110"></a></p>
+<p><span id="toc68683110" name="toc68683110" class="odt-bookmark-anchor"></span></p>
 <h3 id="624-tests-for-the-data-access-class">6.2.4. Tests for the data access class</h3>
 <p>A test program could look like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="k">Option</span><span class="w"> </span><span class="k">Explicit</span><span class="w"> </span><span class="n">On</span><span class="w"> </span>
@@ -2690,10 +2690,10 @@
 <a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>Paramètres du calcul de l&#39;married tax nbEnfants salary or nothing to stop :o 2 60000
 <a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>impôt=4300 F
 </code></pre></div>
-<p><a id="toc68683111"></a></p>
+<p><span id="toc68683111" name="toc68683111" class="odt-bookmark-anchor"></span></p>
 <h3 id="625-web-application-views">6.2.5. Web application views</h3>
 <p>These are the same as in the previous application: formulaire.aspx and erreurs.aspx</p>
-<p><a id="toc68683112"></a></p>
+<p><span id="toc68683112" name="toc68683112" class="odt-bookmark-anchor"></span></p>
 <h3 id="626-the-globalasax-mainaspx-application-controllers">6.2.6. The [global.asax, main.aspx] application controllers</h3>
 <p>Only the [global.asax] controller needs to be modified. It is responsible for creating the [impot] object when the application starts. The constructor for this object has a single parameter: the [impotsData] object responsible for retrieving data. This parameter therefore changes for each new type of data source. The [global.asax.vb] controller becomes the following:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -2752,7 +2752,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
-<p><a id="toc68683113"></a></p>
+<p><span id="toc68683113" name="toc68683113" class="odt-bookmark-anchor"></span></p>
 <h3 id="627-summary-of-changes">6.2.7. Summary of changes</h3>
 <p>The application is ready to be tested. Let&#x27;s list the changes made to the previous version:</p>
 <ol>
@@ -2774,7 +2774,7 @@
   </li>
 </ul>
 
-<p><a id="toc68683114"></a></p>
+<p><span id="toc68683114" name="toc68683114" class="odt-bookmark-anchor"></span></p>
 <h3 id="628-testing-the-web-application">6.2.8. Testing the web application</h3>
 <p>All of the above files are placed in a folder named &lt;application-path&gt;. </p>
 <p><img src="images/1000000000000079000000B31E7E07C8.png" width="121" height="179" style="width:3.201cm;height:4.736cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000079000000B31E7E07C8.png" /></p>
@@ -2791,16 +2791,16 @@
 </code></pre></div>
 <p>The [impot.dll] file above must be placed in &lt;application-path&gt;\bin so that the web application can access it. The Cassini server is launched with the parameters (&lt;application-path&gt;,/impots2). The tests yield the same results as in the previous version, as the presence of the database is transparent to the user. To illustrate this presence, however, we ensure that the ODBC source is unavailable by stopping SGBD and MySQL, and we requesturl and [http://localhost/impots2/main.aspx]. We receive the following response:</p>
 <p><img src="images/10000000000003DF000000D4F145273E.png" width="680" height="146" style="width:17.979cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003DF000000D4F145273E.png" /></p>
-<p><a id="toc68683115"></a></p>
+<p><span id="toc68683115" name="toc68683115" class="odt-bookmark-anchor"></span></p>
 <h2 id="63-example-3">6.3. Example 3</h2>
-<p><a id="toc68683116"></a></p>
+<p><span id="toc68683116" name="toc68683116" class="odt-bookmark-anchor"></span></p>
 <h3 id="631-the-problem">6.3.1. The Problem</h3>
 <p>Here, we propose to address the same issue by again modifying the data source of the [impot] object created by the web application. This time, the new data source will be a ACCESS database accessed via a OLEDB driver. Our goal is to demonstrate another way to access a database.</p>
-<p><a id="toc68683117"></a></p>
+<p><span id="toc68683117" name="toc68683117" class="odt-bookmark-anchor"></span></p>
 <h3 id="632-the-oledb-data-source">6.3.2. The OLEDB data source</h3>
 <p>The data will be located in a table named [IMPOTS] within a database named ACCESS. The contents of this table will be as follows:</p>
 <p><img src="images/100000000000009D000000907940B091.png" width="157" height="144" style="width:4.154cm;height:3.81cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000009D000000907940B091.png" /></p>
-<p><a id="toc68683118"></a></p>
+<p><span id="toc68683118" name="toc68683118" class="odt-bookmark-anchor"></span></p>
 <h3 id="633-the-data-access-class">6.3.3. The data access class</h3>
 <p>Let’s return to the MVC structure of our application:</p>
 <p><img src="images/10000000000005FF0000026916CFA125.png" width="680" height="273" style="width:17.999cm;height:7.234cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005FF0000026916CFA125.png" /></p>
@@ -2978,7 +2978,7 @@
 <a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a><span class="w">            </span><span class="c1">&#39; otherwise we return the three tables</span>
 <a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a><span class="w">            </span><span class="n">Return</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">Object</span><span class="p">()</span><span class="w"> </span><span class="err">{limites, coeffr, coeffn}</span>
 </code></pre></div>
-<p><a id="toc68683119"></a></p>
+<p><span id="toc68683119" name="toc68683119" class="odt-bookmark-anchor"></span></p>
 <h3 id="634-tests-for-the-data-access-class">6.3.4. Tests for the data access class</h3>
 <p>A test program could look like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="k">Option</span><span class="w"> </span><span class="k">Explicit</span><span class="w"> </span><span class="n">On</span><span class="w"> </span>
@@ -3132,10 +3132,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>dos&gt;testimpots xx
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>L&#39;the following error has occurred: Database access error (File &#39;D:\data\serge\devel\aspnet\poly\chap5\impots\3\xx&#39; not found)
 </code></pre></div>
-<p><a id="toc68683120"></a></p>
+<p><span id="toc68683120" name="toc68683120" class="odt-bookmark-anchor"></span></p>
 <h3 id="635-the-web-application-views">6.3.5. The web application views</h3>
 <p>These are the same as in the previous application: formulaire.aspx and erreurs.aspx</p>
-<p><a id="toc68683121"></a></p>
+<p><span id="toc68683121" name="toc68683121" class="odt-bookmark-anchor"></span></p>
 <h3 id="636-the-globalasax-mainaspx-application-controllers">6.3.6. The [global.asax, main.aspx] application controllers</h3>
 <p>Only the [global.asax] controller needs to be modified. It is responsible for creating the [impot] object when the application starts. The constructor for this object has a single parameter: the [impotsData] object responsible for retrieving the data. This parameter therefore changes since we are switching data sources. The [global.asax.vb] controller becomes the following:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -3178,7 +3178,7 @@
 </code></pre></div>
 
 <p>The [main.aspx] controller remains unchanged.</p>
-<p><a id="toc68683122"></a></p>
+<p><span id="toc68683122" name="toc68683122" class="odt-bookmark-anchor"></span></p>
 <h3 id="637-summary-of-changes">6.3.7. Summary of changes</h3>
 <p>The application is ready for testing. Let’s list the changes made to the previous version:</p>
 <ol>
@@ -3190,7 +3190,7 @@
   </li>
 </ol>
 
-<p><a id="toc68683123"></a></p>
+<p><span id="toc68683123" name="toc68683123" class="odt-bookmark-anchor"></span></p>
 <h3 id="638-testing-the-web-application">6.3.8. Testing the web application</h3>
 <p>All of the above files are placed in a folder named &lt;application-path&gt;. </p>
 <p><img src="images/100000000000007D000000C26C070768.png" width="125" height="194" style="width:3.307cm;height:5.133cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000007D000000C26C070768.png" /></p>
@@ -3198,18 +3198,18 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>dos&gt;vbc /r:system.dll /r:system.data.dll /t:library /out:impot.dll impots.vb impotsArray.vb impotsData.vb impotsOLEDB.vb
 </code></pre></div>
 <p>The file [impot.dll] produced by this command must be placed in &lt;application-path&gt;\bin so that the web application can access it. The Cassini server is launched with the parameters (&lt;application-path&gt;,/impots3). The tests yield the same results as in the previous version.</p>
-<p><a id="toc68683124"></a></p>
+<p><span id="toc68683124" name="toc68683124" class="odt-bookmark-anchor"></span></p>
 <h2 id="64-example-4">6.4. Example 4</h2>
-<p><a id="toc68683125"></a></p>
+<p><span id="toc68683125" name="toc68683125" class="odt-bookmark-anchor"></span></p>
 <h3 id="641-the-problem">6.4.1. The Problem</h3>
 <p>We now propose to transform our application into a tax calculation simulation application. A user will be able to perform successive tax calculations, and these will be presented to them on a new view that looks like this:</p>
 <p><img src="images/1000000000000224000000FDCE6E8A0E.png" width="548" height="253" style="width:14.499cm;height:6.694cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000224000000FDCE6E8A0E.png" /></p>
-<p><a id="toc68683126"></a></p>
+<p><span id="toc68683126" name="toc68683126" class="odt-bookmark-anchor"></span></p>
 <h3 id="642-the-mvc-structure-of-the-application">6.4.2. The MVC structure of the application</h3>
 <p>The application’s MVC structure becomes as follows:</p>
 <p><img src="images/10000000000005C60000026362100177.png" width="680" height="281" style="width:17.999cm;height:7.44cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C60000026362100177.png" /></p>
 <p>A new view, [simulations.aspx], appears, of which we have just provided a screenshot. The data access class will be the [impotsODBC] class from Example 2.</p>
-<p><a id="toc68683127"></a></p>
+<p><span id="toc68683127" name="toc68683127" class="odt-bookmark-anchor"></span></p>
 <h3 id="643-web-application-views">6.4.3. Web application views</h3>
 <p>The view [erreurs.aspx] remains unchanged. The view [formulaire.aspx] changes slightly. In fact, the tax amount no longer appears on this view. It is now on the view [simulations.aspx]. Thus, upon startup, the page presented to the user is as follows:</p>
 <p><img src="images/10000000000000FF000000E1926B5BF0.png" width="255" height="225" style="width:6.747cm;height:5.953cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FF000000E1926B5BF0.png" /></p>
@@ -3413,7 +3413,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">link text</div></td></tr></table>
 
-<p><a id="toc68683128"></a></p>
+<p><span id="toc68683128" name="toc68683128" class="odt-bookmark-anchor"></span></p>
 <h3 id="644-the-globalasax-mainaspx-controllers">6.4.4. The [global.asax, main.aspx] controllers</h3>
 <p>Let’s review the diagram of our application:</p>
 <p><img src="images/10000000000005DD0000024D264B72D1.png" width="680" height="267" style="width:17.999cm;height:7.063cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DD0000024D264B72D1.png" /></p>
@@ -3513,7 +3513,7 @@
   </li>
 </ul>
 
-<p><a id="toc68683129"></a></p>
+<p><span id="toc68683129" name="toc68683129" class="odt-bookmark-anchor"></span></p>
 <h3 id="645-summary-of-changes">6.4.5. Summary of Changes</h3>
 <p>The application is ready for testing. Let’s list the changes made to previous versions:</p>
 <ol>
@@ -3523,7 +3523,7 @@
   </li>
 </ol>
 
-<p><a id="toc68683130"></a></p>
+<p><span id="toc68683130" name="toc68683130" class="odt-bookmark-anchor"></span></p>
 <h3 id="646-testing-the-web-application">6.4.6. Testing the web application</h3>
 <p>The reader is invited to perform the tests. Here is a reminder of the procedure. All application files are placed in a folder named &lt;application-path&gt;. Within this folder, a subfolder named [bin] is created, containing the assembly [impot.dll] generated from the compilation of the business class files: [impots.vb, impotsData.vb, impotsArray.vb, impotsODBC.vb. The [impot.dll] file generated by this command must be placed in &lt;application-path&gt;\bin so that the web application can access it. The Cassini server is launched with the parameters (&lt;application-path&gt;,/impots4).</p>
 <h2 id="65-conclusion">6.5. Conclusion</h2>

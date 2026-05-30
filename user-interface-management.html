@@ -1014,16 +1014,16 @@
 
 
 
-<p><a id="toc68706465"></a></p>
+<p><span id="toc68706465" name="toc68706465" class="odt-bookmark-anchor"></span></p>
 <h1 id="5-user-interface-management">5. User Interface Management</h1>
-<p><a id="toc68706466"></a></p>
+<p><span id="toc68706466" name="toc68706466" class="odt-bookmark-anchor"></span></p>
 <h2 id="51-introduction">5.1. Introduction</h2>
 <p>In the client-server relationship on the web, the client transmits information to the server in the form of a [param1=val1&amp;param2=val2&amp;...] parameter string. In our previous examples, we most often built this string manually by requesting url of the form [http://localhost/appli? param1=val1&amp;param2=val2&amp;...]. In reality, the information that the client transmits to the server comes from forms that the user has filled out. We explore the construction of these forms in this chapter. We also introduce the WebMatrix tool, which will allow us to design user interfaces. The installation of this tool is described in the appendices.</p>
-<p><a id="toc69183355"></a>
-<a id="toc68706467"></a></p>
+<p><span id="toc69183355" name="toc69183355" class="odt-bookmark-anchor"></span>
+<span id="toc68706467" name="toc68706467" class="odt-bookmark-anchor"></span></p>
 <h2 id="52-the-html-language">5.2. The HTML language</h2>
-<p><a id="toc69183356"></a>
-<a id="toc68706468"></a></p>
+<p><span id="toc69183356" name="toc69183356" class="odt-bookmark-anchor"></span>
+<span id="toc68706468" name="toc68706468" class="odt-bookmark-anchor"></span></p>
 <h3 id="521-an-example">5.2.1. An Example</h3>
 <p>Consider the following example, created with [Web Matrix], which displays:</p>
 <ul>
@@ -1265,7 +1265,7 @@
 <p>This simple example shows that to build the entire document, the browser must make two requests to the server:</p>
 <p><em>http://localhost/exemple1.htm</em> to retrieve the source of the document</p>
 <p><em>http://localhost/univ01.gif</em> to retrieve the image <em>univ01.gif</em></p>
-<p><a id="toc68706469"></a></p>
+<p><span id="toc68706469" name="toc68706469" class="odt-bookmark-anchor"></span></p>
 <h3 id="522-building-a-form">5.2.2. Building a form</h3>
 <p>A form HTML is designed to present the user with an information entry page similar to the input forms found in Windows. The input form is sent to the browser as a HTML document. The browser displays the form to the user, who fills it out and submits it using a button with that function. The browser then transmits the entered values to the server for processing. Note that it does not send the entire form back to the server, but only the entered values. The following example shows a web form also created with WebMatrix:</p>
 <p><img src="images/1000000000000161000001DBE10B71D4.png" width="353" height="475" style="width:9.34cm;height:12.568cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000161000001DBE10B71D4.png" /></p>
@@ -1457,7 +1457,7 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><span style="color: #0000ff">&lt;</span>input <span style="color: #0000ff">onclick=&quot;clear()&quot; type=&quot;button&quot; value=&quot;Clear&quot; name=&quot;btnEffacer&quot; /&gt;</span></div></td></tr></table>
 
 <p>Let&#x27;s review these different controls.</p>
-<p><a id="toc68706470"></a></p>
+<p><span id="toc68706470" name="toc68706470" class="odt-bookmark-anchor"></span></p>
 <h4 id="5221-the">5.2.2.1. The</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>formulaire
@@ -1472,7 +1472,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>name=&quot;frmexample&quot;</b>: form name</div><div style="margin:0 0 0.5em 0"><b>method=&quot;...&quot; </b>: method used by the browser to send the values collected in the form to the web server</div><div style="margin:0 0 0.5em 0"><b>action=&quot;...&quot; </b>: URL to which the values collected in the form will be sent.</div><div style="margin:0 0 0.5em 0">A web form is enclosed within the tags <i>&lt;form&gt;...&lt;/form&gt;</i>. The form can have a name (<i>name=&quot;xx&quot;</i>). This applies to all controls found within a form. This name is useful if the web document contains scripts that need to reference form elements. The purpose of a form is to collect information entered by the user via the keyboard or mouse and send it to a web server URL. Which one? The one referenced in the <i>action=&quot;URL&quot; </i>attribute. If this attribute is missing, the information will be sent to the server of the document in which the form is located. How does a web client send information (the data contained in the form) to a web server? We have covered this in detail. It can use two different methods called POST and GET. The <i>method=&quot;method&quot; </i>attribute, with method set to GET or POST, in the <i>&lt;form&gt; </i>tag tells the browser which method to use to send the information collected in the form to the URL specified by the <i>action=&quot;URL&quot; </i>attribute. When the <i>method</i> attribute is not specified, the default method is GET.</div></td></tr></table>
 
-<p><a id="toc68706471"></a></p>
+<p><span id="toc68706471" name="toc68706471" class="odt-bookmark-anchor"></span></p>
 <h4 id="5222-input-field">5.2.2.2. Input field</h4>
 <p><img src="images/100000000000014200000037A4D80D2B.png" width="322" height="55" style="width:8.52cm;height:1.455cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014200000037A4D80D2B.png" /></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
@@ -1488,7 +1488,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>type=&quot;text&quot;</b>: specifies that this is a text input field</div><div style="margin:0 0 0.5em 0"><b>type=&quot;password&quot;</b>: the characters in the input field are replaced by asterisks (*). This is the only difference from a normal input field. This type of control is suitable for entering passwords.</div><div style="margin:0 0 0.5em 0"><b>size=&quot;12&quot;</b>: number of characters visible in the field—does not prevent the entry of more characters</div><div style="margin:0 0 0.5em 0"><b>maxlength=&quot;30&quot;</b>: sets the maximum number of characters to 30—the browser is responsible for enforcing this attribute</div><div style="margin:0 0 0.5em 0"><b>name=&quot;txtSaisie&quot;</b>: name of the control</div><div style="margin:0 0 0.5em 0"><b>value=&quot;some words&quot;</b>: text that will be displayed in the input field.</div></td></tr></table>
 
-<p><a id="toc68706472"></a></p>
+<p><span id="toc68706472" name="toc68706472" class="odt-bookmark-anchor"></span></p>
 <h4 id="5223-multi-line-input-field">5.2.2.3. Multi-line input field</h4>
 <p><img src="images/10000000000000EC0000003A38F07F53.png" width="236" height="58" style="width:6.244cm;height:1.535cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EC0000003A38F07F53.png" /></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
@@ -1504,7 +1504,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>rows=&quot;2&quot;</b>: number of lines</div><div style="margin:0 0 0.5em 0"><b>cols=&quot;&#x27;20&quot;</b>: number of columns</div><div style="margin:0 0 0.5em 0"><b>name=&quot;areaSaisie&quot;</b>: control name</div></td></tr></table>
 
-<p><a id="toc68706473"></a></p>
+<p><span id="toc68706473" name="toc68706473" class="odt-bookmark-anchor"></span></p>
 <h4 id="5224-radio-buttons">5.2.2.4. Radio buttons</h4>
 <p><img src="images/10000000000001190000001DD3A87305.png" width="281" height="29" style="width:7.435cm;height:0.767cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001190000001DD3A87305.png" /></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
@@ -1520,7 +1520,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>name=&quot;rdMarie&quot;</b>: control name. Radio buttons with the same name form a mutually exclusive group: only one of them can be selected.</div><div style="margin:0 0 0.5em 0"><b>value=&quot;value&quot;</b>: value assigned to the radio button. Do not confuse this value with the text displayed next to the radio button. The text is for display purposes only.</div><div style="margin:0 0 0.5em 0"><b>checked</b>: if this keyword is present, the radio button is selected; otherwise, it is not.</div></td></tr></table>
 
-<p><a id="toc68706474"></a></p>
+<p><span id="toc68706474" name="toc68706474" class="odt-bookmark-anchor"></span></p>
 <h4 id="5225-checkboxes">5.2.2.5. Checkboxes</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>cases à cocher
@@ -1536,7 +1536,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>name=&quot;C1&quot;</b>: control name. Checkboxes may or may not have the same name. Checkboxes with the same name form a group of associated checkboxes.</div><div style="margin:0 0 0.5em 0"><b>value=&quot;value&quot;</b>: value assigned to the checkbox. Do not confuse this value with the text displayed next to the radio button. The latter is for display purposes only.</div><div style="margin:0 0 0.5em 0"><b>checked</b>: if this keyword is present, the radio button is selected; otherwise, it is not.</div></td></tr></table>
 
-<p><a id="toc68706475"></a></p>
+<p><span id="toc68706475" name="toc68706475" class="odt-bookmark-anchor"></span></p>
 <h4 id="5226-drop-down-list-combo">5.2.2.6. Drop-down list (combo)</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>Combo
@@ -1552,7 +1552,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>name=&quot;cmbValeurs&quot;</b>: control name.</div><div style="margin:0 0 0.5em 0"><b>size=&quot;1&quot;</b>: number of visible list items. <i>size=&quot;1&quot; </i>makes the list equivalent to a combo box. This is the default value if the [size] attribute is absent.</div><div style="margin:0 0 0.5em 0"><b>selected=&quot;selected&quot;</b>: if this keyword is present for a list item, that item appears selected in the list. In our example above, the list item <i>choice2 </i>appears as the selected item in the combo box when it is first displayed.</div><div style="margin:0 0 0.5em 0"><b>value=&quot;value&quot;</b>: sets the value to be sent to the server if the item is selected. If this attribute is missing, the text associated with the option is sent to the server.</div></td></tr></table>
 
-<p><a id="toc68706476"></a></p>
+<p><span id="toc68706476" name="toc68706476" class="odt-bookmark-anchor"></span></p>
 <h4 id="5227-single-select-list">5.2.2.7. Single-select list</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>liste à sélection unique
@@ -1568,7 +1568,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">same as for the drop-down list displaying only one item. This control differs from the previous drop-down list only in its size&gt;1 attribute.</div></td></tr></table>
 
-<p><a id="toc68706477"></a></p>
+<p><span id="toc68706477" name="toc68706477" class="odt-bookmark-anchor"></span></p>
 <h4 id="5228-multi-select-list">5.2.2.8. Multi-select list</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>liste à sélection multiple
@@ -1584,7 +1584,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>multiple</b>: allows the selection of multiple items in the list. In the example above, items <i>list1 </i>and <i>list3 </i>are both selected.</div></td></tr></table>
 
-<p><a id="toc68706478"></a></p>
+<p><span id="toc68706478" name="toc68706478" class="odt-bookmark-anchor"></span></p>
 <h4 id="5229-button">5.2.2.9. Button</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>bouton de type button
@@ -1607,7 +1607,7 @@
 </code></pre></div>
 <div style="margin:0 0 0.5em 0">The <i>clear</i> function displays a message:</div><img src="images/100000000000013A0000007A83A39195.png" width="314" height="122" style="display:inline-block; margin:4px;width:8.308cm;height:3.228cm;" class="odt-zoomable" data-zoom-src="images/100000000000013A0000007A83A39195.png" /></td></tr></table>
 
-<p><a id="toc68706479"></a></p>
+<p><span id="toc68706479" name="toc68706479" class="odt-bookmark-anchor"></span></p>
 <h4 id="52210-button-type-submit">5.2.2.10. Button type submit</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>bouton de type submit
@@ -1623,7 +1623,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>type=&quot;submit&quot;</b>: defines the button as a button for sending form data to the web server. When the user clicks this button, the browser will send the form data to the URL defined in the <b>action</b> attribute of the <b>&lt;form&gt; </b>tag, using the method specified by the <b>method</b> attribute of that same tag.</div><div style="margin:0 0 0.5em 0"><b>value=&quot;Submit&quot;</b>: the text displayed on the button</div></td></tr></table>
 
-<p><a id="toc68706480"></a></p>
+<p><span id="toc68706480" name="toc68706480" class="odt-bookmark-anchor"></span></p>
 <h4 id="52211-reset-button">5.2.2.11. Reset button</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>bouton de type reset
@@ -1639,7 +1639,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>type=&quot;reset&quot;</b>: defines the button as a form reset button. When the user clicks this button, the browser will restore the form to the state in which it was received.</div><div style="margin:0 0 0.5em 0"><b>value=&quot;Reset&quot;</b>: the text displayed on the button</div></td></tr></table>
 
-<p><a id="toc68706481"></a></p>
+<p><span id="toc68706481" name="toc68706481" class="odt-bookmark-anchor"></span></p>
 <h4 id="52212-hidden-field">5.2.2.12. Hidden field</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>champ caché
@@ -1654,8 +1654,8 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>type=&quot;hidden&quot;</b>: specifies that this is a hidden field. A hidden field is part of the form but is not displayed to the user. However, if the user were to ask their browser to display the source code, they would see the presence of the &lt;input type=&quot;hidden&quot; value=&quot;...&quot;&gt; tag and thus the value of the hidden field.</div><div style="margin:0 0 0.5em 0"><b>value=&quot;aValue&quot;</b>: value of the hidden field.</div><div style="margin:0 0 0.5em 0">What is the purpose of a hidden field? It allows the web server to retain information across a client’s requests. Consider an online shopping application. The customer purchases a first item <i>art1 </i>in quantity <i>q1 </i>on the first page of a catalog and then moves to a new page in the catalog. To remember that the customer purchased <i>q1 </i>items <i>of art1</i>, the server can place these two pieces of information in a hidden field in the web form on the new page. On this new page, the client purchases <i>q2 </i>units of <i>item art2</i>. When the data from this second form is sent to the server (submit), the server will not only receive the information (<i>q2</i>,<i>art2</i>) but also (<i>q1</i>,<i>art1</i>), which is also part of the form as a hidden field that cannot be modified by the user. The web server will then place the information (<i>q1</i>,<i>art1</i>) and (<i>q2</i>,<i>art2</i>) into a new hidden field and send a new catalog page. And so on.</div></td></tr></table>
 
-<p><a id="toc69183357"></a>
-<a id="toc68706482"></a></p>
+<p><span id="toc69183357" name="toc69183357" class="odt-bookmark-anchor"></span>
+<span id="toc68706482" name="toc68706482" class="odt-bookmark-anchor"></span></p>
 <h2 id="53-sending-form-values-to-a-web-server-via-a-browser">5.3. Sending form values to a web server via a browser</h2>
 <p>We already know, from the previous chapter, how a client transmits information to the server. It does so either by:</p>
 <ul>
@@ -1697,7 +1697,7 @@
 </code></pre></div>
 
 <p>Each time the [formulaire_get.aspx] document is called, the client request will be saved to a [request.txt] file by the Page_Init procedure. We have already encountered this mode of operation, so we will not comment further on the controller.</p>
-<p><a id="toc68706483"></a></p>
+<p><span id="toc68706483" name="toc68706483" class="odt-bookmark-anchor"></span></p>
 <h3 id="531-method-get">5.3.1. Method GET</h3>
 <p>Let’s perform an initial test, where in the document’s HTML code, the FORM tag is defined as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1772,7 +1772,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>GET http://localhost/form2/formulaire_get.aspx
 </code></pre></div>
 <p>For this reason, in response to our [Envoyer] button, we received the same page as the one initially obtained by requesting URL and [http://localhost/form2/formulaire_get.aspx] without parameters.</p>
-<p><a id="toc68706484"></a></p>
+<p><span id="toc68706484" name="toc68706484" class="odt-bookmark-anchor"></span></p>
 <h3 id="532-post-method">5.3.2. POST Method</h3>
 <p>The HTML document is now configured so that the browser uses the POST method to send the form values to the web server. To do this, we copy the [formulaire_get.aspx] file into [formulaire_post.aspx] and modify only the &lt;form&gt; tag in [formulaire_post.aspx]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1829,9 +1829,9 @@
 </ul>
 
 <p>Going forward, we will use the POST method almost exclusively in our forms.</p>
-<p><a id="toc68706485"></a></p>
+<p><span id="toc68706485" name="toc68706485" class="odt-bookmark-anchor"></span></p>
 <h2 id="54-server-side-processing-of-form-values">5.4. Server-side processing of form values</h2>
-<p><a id="toc68706486"></a></p>
+<p><span id="toc68706486" name="toc68706486" class="odt-bookmark-anchor"></span></p>
 <h3 id="541-overview-of-the-example">5.4.1. Overview of the example</h3>
 <p>Now that we have established the connection between the HTML tag &lt;form method=&quot;GET/POST&quot; ...&gt; and the way the browser sends form values, we know how to retrieve them on the server side. The previous chapter provided the answer:</p>
 <ul>
@@ -1853,7 +1853,7 @@
 <p><img src="images/10000000000001BC0000025E507D976E.png" width="444" height="606" style="width:11.748cm;height:16.034cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BC0000025E507D976E.png" /></p>
 <p>The user clicks the [Envoyer] button to submit their entries. In response, they see the following [vue_validation] view:</p>
 <p><img src="images/1000000000000213000001EAFEE9CE00.png" width="531" height="490" style="width:14.049cm;height:12.965cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000213000001EAFEE9CE00.png" /></p>
-<p><a id="toc68706487"></a></p>
+<p><span id="toc68706487" name="toc68706487" class="odt-bookmark-anchor"></span></p>
 <h3 id="542-the-application-controller">5.4.2. The application controller</h3>
 <p>In the previous chapter, we saw that we could assign the role of controller for a MVC application to the [global.asax] file, through which all requests from the clients files pass. We have already presented a MVC application built in this way, and here we follow the development model presented at that time. The [global.asax] file will be as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>&lt;%@ Application src=&quot;Global.asax.vb&quot; Inherits=&quot;Global&quot; %&gt;
@@ -1904,7 +1904,7 @@
   </li>
 </ul>
 
-<p><a id="toc68706488"></a></p>
+<p><span id="toc68706488" name="toc68706488" class="odt-bookmark-anchor"></span></p>
 <h3 id="543-processing-the-init-action">5.4.3. Processing the init action</h3>
 <p>When the controller processes the &quot;init&quot; action, it must generate a pre-filled form. It is the role of the page [formulaire.aspx] to perform this task. Its code is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2013,7 +2013,7 @@
 </code></pre></div>
 <p>This function receives a parameter that is a Javascript object representing a HTML list. This object has properties and methods. One of its properties is [selectedIndex], whose value is the number of the first option selected in the HTML list. If there is none, this property is -1. Conversely, setting a value for this property is equivalent to selecting a new element from the list HTML, and setting it to -1 is equivalent to having no element selected. This is what is done here.</p>
 <p>Finally, note that the presentation code [formulaire.aspx] is not accompanied by a controller [formulaire.aspx.vb]. In fact, there is no server-generated dynamic content in the document HTML, so there is no need for a controller.</p>
-<p><a id="toc68706489"></a></p>
+<p><span id="toc68706489" name="toc68706489" class="odt-bookmark-anchor"></span></p>
 <h3 id="544-handling-the-validation-action">5.4.4. Handling the validation action</h3>
 <p>When the controller processes the &quot;validation&quot; action, it must generate a page listing the values entered by the user. It is the role of the [validation.aspx] page to perform this task. Visually, the page appears as follows:</p>
 <p><img src="images/1000000000000213000001EAFEE9CE00.png" width="531" height="490" style="width:14.049cm;height:12.965cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000213000001EAFEE9CE00.png" /></p>
@@ -2138,7 +2138,7 @@
 </ul>
 
 <p>The field [areaSaisie] is handled in a special way. Its value is sent by the browser in the form areaSaisie=line1\r\nline2\r\n... where \r is the character with code ASCII 13 (carriage return) and \n is the character with code ASCII 10 (line feed). The function getValue(areaSaisie) is therefore the string &quot;line1\r\nline2\r\n...&quot;. This string is split into lines by the method [Regex.Split]. This results in an array of strings {line1,line2,...}. This array is converted into the string &quot;line1,line2,...&quot; by the [String.Join] method. It is this final string that will be displayed as the value of the [areaSaisie] field. The goal here was to show how to retrieve the different lines of a HTML field of type [TextArea].</p>
-<p><a id="toc68706490"></a></p>
+<p><span id="toc68706490" name="toc68706490" class="odt-bookmark-anchor"></span></p>
 <h3 id="545-tests">5.4.5. Tests</h3>
 <p>We place all the files (global.asax, global.asax.vb, formulaire.aspx, validation.aspx, validation.aspx.vb) in a folder named &lt;application-path&gt;. We start the Cassini server with the parameters (&lt;application-path&gt;,/mvcform1). We create an empty file named [default.aspx] in the &lt;application-path&gt; folder, then request url and [http://localhost/mvcform1]. Since [/mvcform1] is the virtual path to a folder and not a document, the web server will display the [default.aspx] document if it exists. That is why we created it. Before displaying it, the script [global.asax] will be executed and will ultimately display the page [formulaire.aspx]. This is why the file [default.aspx] can be empty.</p>
 <p>Suppose the validated form is as follows:</p>
@@ -2165,9 +2165,9 @@
 <p>Here is the page returned after validation:</p>
 <p><img src="images/100000000000012F0000004DF5DD66CE.png" width="303" height="77" style="width:8.017cm;height:2.037cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012F0000004DF5DD66CE.png" /></p>
 <p>When no value is selected in a list, the browser does not send a parameter for it. In the [validation.aspx.vb] code, the expressions [Request.Form(&quot;lstSimple&quot;)] and [Request.Form(&quot;lstMultiple&quot;)] are therefore equal to the constant [Nothing], hence the result shown above.</p>
-<p><a id="toc68706491"></a></p>
+<p><span id="toc68706491" name="toc68706491" class="odt-bookmark-anchor"></span></p>
 <h2 id="55-maintaining-the-state-of-a-page">5.5. Maintaining the state of a page</h2>
-<p><a id="toc68706492"></a></p>
+<p><span id="toc68706492" name="toc68706492" class="odt-bookmark-anchor"></span></p>
 <h3 id="551-maintaining-a-pages-state-with-a-session">5.5.1. Maintaining a page&#x27;s state with a session</h3>
 <p>We duplicate the entire previous application into a new folder. We add a link to the [validation.aspx] page allowing the user to return to the form:</p>
 <p><img src="images/100000000000014A000000687FAD9B12.png" width="330" height="104" style="width:8.731cm;height:2.752cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014A000000687FAD9B12.png" /></p>
@@ -2246,7 +2246,7 @@
   </li>
 </ul>
 
-<p><a id="toc68706493"></a></p>
+<p><span id="toc68706493" name="toc68706493" class="odt-bookmark-anchor"></span></p>
 <h3 id="552-the-new-application-controller">5.5.2. The new application controller</h3>
 <p>The application controller consists of two files, [main.aspx, main.aspx.vb]:</p>
 <p>[main.aspx]</p>
@@ -2320,7 +2320,7 @@
   </li>
 </ul>
 
-<p><a id="toc68706494"></a></p>
+<p><span id="toc68706494" name="toc68706494" class="odt-bookmark-anchor"></span></p>
 <h3 id="553-the-new-form">5.5.3. The new form</h3>
 <p>Because the application no longer displays the same content in the form, the form must be generated dynamically. The new page [formulaire.aspx] becomes the following:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2656,7 +2656,7 @@
   </li>
 </ol>
 
-<p><a id="toc68706495"></a></p>
+<p><span id="toc68706495" name="toc68706495" class="odt-bookmark-anchor"></span></p>
 <h3 id="554-the-validation-page">5.5.4. The validation page</h3>
 <p>The validation page remains unchanged:</p>
 <p>[validation.aspx]</p>
@@ -2776,7 +2776,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p><a id="toc68706496"></a></p>
+<p><span id="toc68706496" name="toc68706496" class="odt-bookmark-anchor"></span></p>
 <h3 id="555-testing">5.5.5. Testing</h3>
 <p>The [main.aspx, main.aspx.vb,formulaire.aspx,formulaire.aspx.vb, validation.aspx, validation.aspx.vb] files are placed in &lt;application-path&gt; and Casini is launched with the parameters (&lt;application-path&gt;,/mvcform3). We then request the url and [http://localhost/mvcform3/main.aspx] files. We obtain the pre-initialized form:</p>
 <p><img src="images/10000000000001E70000024C0C373853.png" width="487" height="588" style="width:12.885cm;height:15.558cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E70000024C0C373853.png" /></p>
@@ -2787,7 +2787,7 @@
 <p>We use the [Retour au formulaire] link above to return to the form. We receive the following new response:</p>
 <p><img src="images/100000000000024000000240F960F728.png" width="576" height="576" style="width:15.24cm;height:15.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024000000240F960F728.png" /></p>
 <p>We see the form exactly as we submitted it.</p>
-<p><a id="toc68706497"></a></p>
+<p><span id="toc68706497" name="toc68706497" class="odt-bookmark-anchor"></span></p>
 <h3 id="556-conclusion">5.5.6. Conclusion</h3>
 <p>The previous example showed us that it is possible to maintain a page’s state throughout the request-response cycles between the client and the server. However, this is not a trivial task. We will see in a later chapter that it is possible to use ASP.NET to let the server restore a page’s state on its own.</p>
 
