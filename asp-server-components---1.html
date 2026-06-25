@@ -3794,72 +3794,39 @@
 </code></pre></div>
 <p>[main.aspx.vb]</p>
 <p>Public Class main</p>
-<div class="highlight"><pre><span></span><code>Inherits System.Web.UI.Page
-
-Private Sub Page\_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    &amp;#x27; retrieve the action to be performed
-
-    Dim action As String
-
-    If Request.QueryString(&amp;quot;action&amp;quot;) Is Nothing Then
-
-        action = &amp;quot;label&amp;quot;
-
-    Else
-
-        action = Request.QueryString(&amp;quot;action&amp;quot;).ToString.ToLower
-
-    End If
-
-    &amp;#x27; execute the action
-
-    Select Case action
-
-        Case &amp;quot;label&amp;quot;
-
-            Server.Transfer(&amp;quot;form2.aspx&amp;quot;)
-
-        Case &amp;quot;button&amp;quot;
-
-            Server.Transfer(&amp;quot;form3.aspx&amp;quot;)
-
-        Case &amp;quot;textbox1&amp;quot;
-
-            Server.Transfer(&amp;quot;form4.aspx&amp;quot;)
-
-        Case &amp;quot;textbox2&amp;quot;
-
-            Server.Transfer(&amp;quot;form5.aspx&amp;quot;)
-
-        Case &amp;quot;dropdownlist&amp;quot;
-
-            Server.Transfer(&amp;quot;form6.aspx&amp;quot;)
-
-        Case &amp;quot;listbox&amp;quot;
-
-            Server.Transfer(&amp;quot;form7.aspx&amp;quot;)
-
-        Case &amp;quot;checkbox&amp;quot;
-
-            Server.Transfer(&amp;quot;form8.aspx&amp;quot;)
-
-        &amp;quot;checkbox list&amp;quot; case
-
-            Server.Transfer(&amp;quot;form8b.aspx&amp;quot;)
-
-        &amp;quot;panel&amp;quot; field
-
-            Server.Transfer(&amp;quot;form9.aspx&amp;quot;)
-
-        Case Else
-
-            Server.Transfer(&amp;quot;form2.aspx&amp;quot;)
-
-    End Select
-
-End Sub
-</code></pre></div>
+<p>Inherits System.Web.UI.Page</p>
+<p>Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load</p>
+<p>&#x27; retrieve the action to be performed</p>
+<p>Dim action As String</p>
+<p>If Request.QueryString(&quot;action&quot;) Is Nothing Then</p>
+<p>action = &quot;label&quot;</p>
+<p>Else</p>
+<p>action = Request.QueryString(&quot;action&quot;).ToString.ToLower</p>
+<p>End If</p>
+<p>&#x27; execute the action</p>
+<p>Select Case action</p>
+<p>Case &quot;label&quot;</p>
+<p>Server.Transfer(&quot;form2.aspx&quot;)</p>
+<p>Case &quot;button&quot;</p>
+<p>Server.Transfer(&quot;form3.aspx&quot;)</p>
+<p>Case &quot;textbox1&quot;</p>
+<p>Server.Transfer(&quot;form4.aspx&quot;)</p>
+<p>Case &quot;textbox2&quot;</p>
+<p>Server.Transfer(&quot;form5.aspx&quot;)</p>
+<p>Case &quot;dropdownlist&quot;</p>
+<p>Server.Transfer(&quot;form6.aspx&quot;)</p>
+<p>Case &quot;listbox&quot;</p>
+<p>Server.Transfer(&quot;form7.aspx&quot;)</p>
+<p>Case &quot;checkbox&quot;</p>
+<p>Server.Transfer(&quot;form8.aspx&quot;)</p>
+<p>&quot;checkbox list&quot; case</p>
+<p>Server.Transfer(&quot;form8b.aspx&quot;)</p>
+<p>&quot;panel&quot; field</p>
+<p>Server.Transfer(&quot;form9.aspx&quot;)</p>
+<p>Case Else</p>
+<p>Server.Transfer(&quot;form2.aspx&quot;)</p>
+<p>End Select</p>
+<p>End Sub</p>
 <p>End Class</p>
 <p>Our controller is simple. Depending on the value of the [action] parameter, it forwards the request to the appropriate page. It offers no added value compared to a HTML page with links. However, simply adding an authentication page would demonstrate its value. If the user had to authenticate (username, password) to access the applications, the [main.aspx] controller would be a good place to verify that this authentication has been completed.</p>
 
